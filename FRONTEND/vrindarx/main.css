@@ -1,0 +1,253 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body::-webkit-scrollbar-track{
+    background: #d7d7d7;
+}
+@keyframes onScreen {
+    100%{
+        position: static;
+        left: 0vw;
+        pointer-events: all;
+        visibility: visible;
+    }
+}
+@keyframes offScreen {
+    100%{
+        position: absolute;
+        left: -200vw;
+        pointer-events: none;
+        visibility: hidden;
+    }
+}
+header{
+    display: flex;
+    align-items: center;
+    padding: 50px 50px 45px 50px;
+    gap: 10px;
+}
+
+header div{
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+}
+header div.inactive{
+    background: #d7d7d7;
+}
+header div.active{
+    background: #3C3C3C;
+}
+header p{
+    margin-left: 20px;
+    font-family: "Arial";
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #3C3C3C;
+}
+
+main > div{
+    position: absolute;
+    left: -200vw;
+    pointer-events: none;
+    visibility: hidden;
+}
+main.stage1Keyword,main.stage1Scraping{
+    padding: 200px 0px 0px 60px;
+}
+main.stage1Keyword div.stage1Keyword{
+    animation: onScreen 0s both;
+}
+main div.stage1Keyword p.inputLabel{
+    padding: 0px 0px 9px 5px;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 18px;
+    color: #3C3C3C;
+}
+main div.stage1Keyword form{
+    width: 324px;
+    display: flex;
+    background: #d7d7d7;
+    border-radius: 8px;
+}
+main div.stage1Keyword form input[type=text]{
+    
+    pointer-events: none;
+    
+    
+    flex:1;
+    border-radius: 8px 0px 0px 8px;
+    border: none;
+    background: #d7d7d7;
+    height: 40px;
+    outline: none;
+    
+    padding-left: 20px;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 18px;
+    color: #3C3C3C;
+    caret-color: #3c3c3c;
+}
+/* main.stage1Keyword form input[type=text]::placeholder{
+    opacity: 1;
+} */
+
+main div.stage1Keyword form button[type=submit]{
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background: #3c3c3c;
+    margin-left: auto;
+
+}
+main div.stage1Scraping{
+    display: flex;
+    flex-direction: column;
+}
+main.stage1Scraping div.stage1Scraping{
+    animation: onScreen 0s both;
+}
+main div.stage1Scraping p.counting{
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 18px;
+    color: #3C3C3C;
+}
+main div.stage1Scraping p.counting b{
+    font-size: 35px;
+}
+main div button.proceed{
+    pointer-events: none;
+    display: flex;
+    place-items: center;
+    gap: 11px;
+    margin-top: 20px;
+    padding: 9px 30px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    align-self: flex-start;
+}
+main div button.proceed.loading{
+    background-color: #d7d7d7;
+}
+main div button.proceed.loading p.loadingText{
+    animation: onScreen 0s both;
+}
+main div button.proceed.continue{
+    cursor: pointer;
+    pointer-events: all;
+    background-color: #3c3c3c;
+}
+main div button.proceed.continue p.continueText{
+    animation: onScreen 0s both;
+}
+main div button.proceed.continue svg.arrow{
+    animation: onScreen 0s both;
+}
+main div button.proceed p{
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    left: -200vw;
+    visibility: hidden;
+    
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 18px;
+}
+main div button.proceed svg.arrow{
+    pointer-events: none;
+    position: absolute;
+    left: -200vw;
+    visibility: hidden;
+}
+main div button.proceed p.loadingText{
+    color: #9d9d9d;
+}
+main div button.proceed p.continueText{
+    color: #ffffff;
+}
+main.stage2Records div.stage2Records{
+    animation: onScreen 0s both;
+}
+main div.stage2Records,div.stage4Sus{
+    padding: 0px 50px;
+}
+main div div.list{
+    background: #d7d7d7;
+    padding: 10px;
+    border-radius: 20px;
+}
+main div div.list div.tableWrapper{
+    height: 400px;
+    overflow: scroll;
+}
+main div div.list table{
+    font-family: "Arial";
+    font-size: 14px;
+    color: #3c3c3c;
+    border-spacing: 0px;
+    border-collapse: separate;
+    overflow: auto;
+    padding: 0px 20px;
+    
+}
+main div div.list table td{
+    padding: 15px 0px 0px 0px;
+}
+main div div.list table td:nth-child(1){
+    width: 180px;
+}
+main div div.list table td:nth-child(2){
+    width: 160px;
+    padding-left: 10px;
+}
+main div div.list table td:nth-child(3){
+    padding-left: 10px;
+}
+main div div.list div.tableHead{
+    position: static;
+    padding: 14px 20px;
+    background: #3c3c3c;
+    border-radius: 12px;
+    display: flex;
+}
+main div div.list div.tableHead p{
+    font-family: "Arial";
+    text-align: start;
+    
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #d7d7d7;
+}
+main div div.list div.tableHead p:nth-child(1){
+    width: 180px;
+}
+main div div.list div.tableHead p:nth-child(2){
+    width: 160px;
+    padding-left: 10px;
+}
+main div div.list div.tableHead p:nth-child(3){
+    padding-left: 10px;
+}
+main.stage3Network div.stage3Network{
+    animation: onScreen 0s both;
+}
+main div.stage3Network{
+    padding: 0px 50px;
+}
+main div.stage3Network div#container{
+    height: 450px;
+}
+main.stage4Sus div.stage4Sus{
+    animation: onScreen 0s both;
+}

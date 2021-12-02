@@ -1,0 +1,76 @@
+{
+    "nodes": [
+      {
+        "id": "Asfandov"
+      },
+      {
+        "id": "wahiz Mumand"
+      },
+      {
+        "id": "Taher Ahmadi"
+      },
+      {
+        "id": "@TalibanSoldiers"
+      },
+      {
+        "id": "@badri313_army"
+      },
+      {
+        "id": "mohebullah"
+      },
+      {
+        "id": "Mahdi Parsa"
+      },
+      {
+        "id": "Nahim Ahmadi"
+      },
+      {
+        "id": "@SalimZirak"
+      },
+      {
+        "id": "Naim Omar"
+      },
+      {
+        "id": "Mallister"
+      },
+      {
+        "id": "Mahdi Parsa"
+      },
+      {
+        "id": "lutfi khan"
+      },
+      {
+        "id": "@mym_yama"
+      },
+      {
+        "id": "Aminullah Ahmadi"
+      },
+      {
+        "id": "@FahimRomal"
+      }
+    ],
+    "edges": [
+      { "from": "@TalibanSoldiers", "to": "@mym_yama" },
+      { "from": "@TalibanSoldiers", "to": "@badri313_army" },
+      { "from": "Mallister", "to": "@TalibanSoldiers" },
+      { "from": "@TalibanSoldiers", "to": "@SalimZirak" },
+      { "from": "Taher Ahmadi", "to": "Mallister" },
+      { "from": "Mallister", "to": "Taher Ahmadi" },
+      { "from": "Aminullah Ahmadi", "to": "Mallister" },
+      { "from": "@badri313_army", "to": "@TalibanSoldiers" },
+      { "from": "@SalimZirak", "to": "@TalibanSoldiers" },
+      { "from": "Naim Omar", "to": "Brave Companions" },
+      { "from": "@TalibanSoldiers", "to": "Mallister" },
+      { "from": "@TalibanSoldiers", "to": "Brave Companions" },
+      { "from": "@FahimRomal", "to": "Mallister" },
+      { "from": "@FahimRomal", "to": "Mallister" },
+      { "from": "Mahdi Parsa", "to": "wahiz Mumand" },
+      { "from": "Mahdi Parsa", "to": "@@badri313_army" },
+      { "from": "Aminullah Ahmadi", "to": "Taher Ahmadi" },
+      { "from": "@badri313_army", "to": "Taher Ahmadi" },
+      { "from": "Taher Ahmadi", "to": "Tyrell" },
+      { "from": "Asfandov", "to": "Blackwood" },
+      { "from": "@badri313_army", "to": "Aminullah Ahmadi" },
+      { "from": "@badri313_army", "to": "@FahimRomal" }
+    ]
+  }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Manthan</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <header>
+        <div class="active"></div>
+        <div class="inactive"></div>
+        <div class="inactive"></div>
+        <div class="inactive"></div>
+        <p></p>
+    </header>
+
+    <main class="stage1Keyword">
+
+        <div class="stage1Keyword">
+            <p class="inputLabel">Enter a keyword to search for</p>
+            <form>
+                <input type="text" placeholder="Using default keyword list">
+                <button type="submit">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7.5C13 10.5376 10.5376 13 7.5 13C4.46243 13 2 10.5376 2 7.5C2 4.46243 4.46243 2 7.5 2C10.5376 2 13 4.46243 13 7.5ZM11.698 13.716C10.5001 14.5266 9.05533 15 7.5 15C3.35785 15 0 11.6422 0 7.5C0 3.35785 3.35785 0 7.5 0C11.6422 0 15 3.35785 15 7.5C15 9.05533 14.5266 10.5001 13.7159 11.698L20.4877 18.4698L18.4698 20.4878L11.698 13.716Z" fill="white"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+        <div class="stage1Scraping">
+            <p class="counting"><b>0</b> tweets found</p>
+            <button class="loading proceed">
+                <p class="loadingText">Loading <b>...</b></p>
+                <p class="continueText">Continue</p>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.07102 14.1421L14.1421 7.07104L7.07102 -2.2769e-05L5.65684 1.41416L11.3137 7.071L5.6568 12.7279L7.07102 14.1421Z" fill="white"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="stage2Records">
+            <div class="list">
+                <div class="tableHead">
+                    <p class="IDtext">ID</p>
+                    <p class="UsernameText">Username</p>
+                    <p class="TweetText">Tweet</p>
+                </div>
+                <div class="tableWrapper">
+                    <table>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <button class="loading proceed">
+                <p class="loadingText">Loading <b>...</b></p>
+                <p class="continueText">Continue</p>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.07102 14.1421L14.1421 7.07104L7.07102 -2.2769e-05L5.65684 1.41416L11.3137 7.071L5.6568 12.7279L7.07102 14.1421Z" fill="white"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="stage3Network">
+            <div id="container"></div>
+            <button class="loading proceed">
+                <p class="loadingText">Loading <b>...</b></p>
+                <p class="continueText">Continue</p>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.07102 14.1421L14.1421 7.07104L7.07102 -2.2769e-05L5.65684 1.41416L11.3137 7.071L5.6568 12.7279L7.07102 14.1421Z" fill="white"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="stage4Sus">
+            <div class="list">
+                <div class="tableHead">
+                    <p class="IDtext">ID</p>
+                    <p class="UsernameText">Username</p>
+                </div>
+                <div class="tableWrapper">
+                    <table>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.anychart.com/releases/8.8.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.8.0/js/anychart-graph.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.8.0/js/anychart-data-adapter.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
