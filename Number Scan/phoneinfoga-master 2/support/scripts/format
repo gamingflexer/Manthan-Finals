@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Formatting Go files..."
+
+gofmt -s -w -l .
+
+echo "Done."

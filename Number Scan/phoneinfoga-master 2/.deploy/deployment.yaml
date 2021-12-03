@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: demo-phoneinfoga-app
+  name: demo-phoneinfoga-app
+spec:
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: demo-phoneinfoga-app
+  template:
+    metadata:
+      labels:
+        app: demo-phoneinfoga-app
+    spec:
+      containers:
+        - image: sundowndev/phoneinfoga@sha256:fa870a98913831f1a5019d3649169bfee7346b98bcfe691c928c93238c2586e9
+          args:
+            - serve
+          name: demo-phoneinfoga-app
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+              name: http
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "200m"

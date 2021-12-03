@@ -1,0 +1,8 @@
+selenium
+phonenumbers
+pyvirtualdisplay
+requests
+undetected_chromedriver
+clint
+certifi
+bs4
