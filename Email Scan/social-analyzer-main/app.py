@@ -729,8 +729,8 @@ class SocialAnalyzer():
         if platform == "win32":
             system("color")
         makedirs(path.join(path.dirname(__file__), "data"), exist_ok=True)
-        self.languages_json = self.load_file("languages.json", self.languages_path, "https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/data/languages.json")
-        self.sites_dummy = self.load_file("sites.json", self.sites_path, "https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/data/sites.json")
+        self.languages_json = self.load_file("languages.json", self.languages_path, "")
+        self.sites_dummy = self.load_file("sites.json", self.sites_path, "")
         self.websites_entries = self.init_detections("websites_entries")
         self.shared_detections = self.init_detections("shared_detections")
         self.generic_detection = self.init_detections("generic_detection")
@@ -770,7 +770,7 @@ class SocialAnalyzer():
 
         ret = {}
         ARGV = None
-        ARG_PARSER = _ArgumentParser(description="Qeeqbox/social-analyzer - API and Web App for analyzing & finding a person's profile across 900+ social media websites (Detections are updated regularly)", usage=SUPPRESS)
+        ARG_PARSER = _ArgumentParser(description="  API and Web App for analyzing & finding a person's profile across 900+ social media websites (Detections are updated regularly)", usage=SUPPRESS)
         ARG_PARSER._action_groups.pop()
         ARG_PARSER_OPTIONAL = ARG_PARSER.add_argument_group("Arguments")
         ARG_PARSER_OPTIONAL.add_argument("--username", help="E.g. johndoe, john_doe or johndoe9999", metavar="", default="")

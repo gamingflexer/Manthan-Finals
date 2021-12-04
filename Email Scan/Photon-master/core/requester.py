@@ -24,7 +24,7 @@ def requester(
     """Handle the requests and return the response body."""
     cook = cook or set()
     headers = headers or set()
-    user_agents = user_agents or ['Photon']
+    user_agents = user_agents or ['']
     failed = failed or set()
     processed = processed or set()
     # Mark the URL as crawled

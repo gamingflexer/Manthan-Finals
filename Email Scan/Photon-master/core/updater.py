@@ -13,7 +13,7 @@ def updater():
     print('%s Checking for updates' % run)
     # Changes must be separated by ;
     changes = '''major bug fixes;removed ninja mode;dropped python < 3.2 support;fixed unicode output;proxy support;more intels'''
-    latest_commit = requester('https://raw.githubusercontent.com/s0md3v/Photon/master/core/updater.py', host='raw.githubusercontent.com')
+  """  latest_commit = requester('https://raw.githubusercontent.com/s0md3v/Photon/master/core/updater.py', host='raw.githubusercontent.com')"""
     # Just a hack to see if a new version is available
     if changes not in latest_commit:
         changelog = re.search(r"changes = '''(.*?)'''", latest_commit)
@@ -29,7 +29,7 @@ def updater():
         path = '/'.join(current_path) # current directory path
         choice = input('%s Would you like to update? [Y/n] ' % que).lower()
 
-        if choice != 'n':
+     """   if choice != 'n':
             print('%s Updating Photon' % run)
             os.system('git clone --quiet https://github.com/s0md3v/Photon %s'
                       % (folder))
@@ -37,4 +37,4 @@ def updater():
                       % (path, folder, path, path, folder))
             print('%s Update successful!' % good)
     else:
-        print('%s Photon is up to date!' % good)
+        print('%s Photon is up to date!' % good)"""
