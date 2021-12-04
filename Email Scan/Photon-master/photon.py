@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+
 """The Photon main part."""
 from __future__ import print_function
 
@@ -13,16 +12,6 @@ import warnings
 import random
 
 from core.colors import good, info, run, green, red, white, end, bad
-
-# Just a fancy ass banner
-print('''%s      ____  __          __
-     / %s__%s \/ /_  ____  / /_____  ____
-    / %s/_/%s / __ \/ %s__%s \/ __/ %s__%s \/ __ \\
-   / ____/ / / / %s/_/%s / /_/ %s/_/%s / / / /
-  /_/   /_/ /_/\____/\__/\____/_/ /_/ %sv1.3.2%s\n''' %
-      (red, white, red, white, red, white, red, white, red, white, red, white,
-       red, white, end))
-
 try:
     from urllib.parse import urlparse  # For Python 3
 except ImportError:
