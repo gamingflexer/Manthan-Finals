@@ -4,9 +4,11 @@ VERBOSE = False
 
 INTELS = [
     'facebook.com',
-    'github.com',
     'instagram.com',
+   """
+    'github.com',
     'youtube.com',
+   """
 ]
 
 BAD_TYPES = (
