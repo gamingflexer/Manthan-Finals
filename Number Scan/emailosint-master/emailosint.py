@@ -1,7 +1,7 @@
 import sys
 import json
 import getopt
-# infoga.lib
+#infoga.lib
 from lib.check import *
 from lib.output import *
 from lib.banner import Banner
@@ -18,8 +18,7 @@ from recon.mailtester import *
 from lib.output import PPrint
 
 
-class infoga(object):
-    """ infoga """
+class emailo(object):
 
     def __init__(self):
         self.verbose = 1
@@ -104,6 +103,6 @@ class infoga(object):
 
 if __name__ == "__main__":
     try:
-        infoga().main()
+        emailo().main()
     except KeyboardInterrupt as e:
         sys.exit(warn('Exiting...'))

@@ -9,23 +9,23 @@ from recon.pwned import *
 from recon.shodan import *
 
 
-def plus(string): print("%s[+]%s %s" % (G % 0, E, string))
+def plus(string): print("%s[+]%s %s" % ( string))
 
 
-def warn(string): print("%s[!]%s %s" % (R % 0, E, string))
+def warn(string): print("%s[!]%s %s" % (string))
 
 
-def test(string): print("%s[*]%s %s" % (B % 0, E, string))
+def test(string): print("%s[*]%s %s" % (string))
 
 
-def info(string): print("%s[i]%s %s" % (Y % 0, E, string))
+def info(string): print("%s[i]%s %s" % ( string))
 
 
-def more(string): print(" %s|%s  %s" % (W % 0, E, string))
+def more(string): print(" %s|%s  %s" % (string))
 
 
 class PPrint(object):
-    '''PPrint class'''
+    '''Print class'''
 
     def __init__(self, ips, email, ver, pwned=False, report=None):
         self.ips = ips
@@ -86,7 +86,7 @@ class PPrint(object):
                     self.file.write(headers + '\n')
                 print(headers)
             else:
-                info('Not found information (on shodan) for this email, search this ip/ips on internet..')
+                info('Not found information (on shodan) for this email, search his ip/ips on internet..')
                 if self.file != None:
                     self.file.write(
                         '%s- Not found information (on shodan) for this email, search this ip/ips on internet..')
