@@ -15,26 +15,11 @@ except:
     print('[!] Missing requirements. Try running python3 -m pip install -r requirements.txt')
     sys.exit()
 
-def banner():
-    print("    ___ _                       _____        __                   ")
-    print("   / _ \ |__   ___  _ __   ___  \_   \_ __  / _| ___   __ _  __ _ ")
-    print("  / /_)/ '_ \ / _ \| '_ \ / _ \  / /\/ '_ \| |_ / _ \ / _` |/ _` |")
-    print(" / ___/| | | | (_) | | | |  __/\/ /_ | | | |  _| (_) | (_| | (_| |")
-    print(" \/    |_| |_|\___/|_| |_|\___\____/ |_| |_|_|  \___/ \__, |\__,_|")
-    print("                                                      |___/       ")
-    print(" PhoneInfoga Ver. {}".format(__version__))
-    print(" Coded by Charon IV")
-    print("\n")
-
-banner()
-
 if sys.version_info[0] < 3:
     print("\033[1m\033[93m(!) Please run the tool using Python 3" + Style.RESET_ALL)
     sys.exit()
 
-parser = argparse.ArgumentParser(description=
-    "Advanced information gathering tool for phone numbers (https://github.com/sundowndev/PhoneInfoga) version {}".format(__version__),
-                                 usage='%(prog)s -n <number> [options]')
+parser = argparse.ArgumentParser(usage='Script Name  -n <number> [options]')
 
 parser.add_argument('-n', '--number', metavar='number', type=str,
                     help='The phone number to scan (E164 or international format)')
@@ -88,6 +73,8 @@ except:
     print('\033[91m[!] Missing requirements. Try running python3 -m pip install -r requirements.txt')
     sys.exit()
 
+
+
 requests.packages.urllib3.disable_warnings()
 requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += 'HIGH:!DH:!aNULL'
 try:
@@ -104,34 +91,12 @@ if args.update:
             if chunk:  # filter out keep-alive new chunks
                 handle.write(chunk)
 
-    print('Updating PhoneInfoga...')
+    print('Updating ...')
     print('Actual version: {}'.format(__version__))
 
-    # Fetching last github tag
-    new_version = json.loads(requests.get('https://api.github.com/repos/sundowndev/PhoneInfoga/tags').content)[0]['name']
-    print('Last version: {}'.format(new_version))
 
     osintFiles = ['disposable_num_providers.json', 'individuals.json', 'reputation.json', 'social_medias.json']
 
-    try:
-        print('[*] Updating OSINT files')
-
-        for file in osintFiles:
-            url = 'https://raw.githubusercontent.com/sundowndev/PhoneInfoga/master/osint/{}'.format(file)
-            output_directory = 'osint/{}'.format(file)
-            download_file(url, output_directory)
-
-        print('[*] Updating python script')
-
-        url = 'https://raw.githubusercontent.com/sundowndev/PhoneInfoga/master/phoneinfoga.py'
-        output_directory = 'phoneinfoga.py'
-        download_file(url, output_directory)
-    except:
-        print('Update failed. Try using git pull.')
-        sys.exit()
-
-    print('The tool was successfully updated.')
-    sys.exit()
 
 scanners = ['any', 'all', 'numverify', 'ovh']
 
@@ -178,7 +143,6 @@ def search(req, stop):
 
         while r.status_code == 503:
             print(code_warning + 'You are temporary blacklisted from Google search. Complete the captcha at the following URL and copy/paste the content of GOOGLE_ABUSE_EXEMPTION cookie : {}'.format(URL))
-            print('\n' + code_info + 'Need help ? Read https://github.com/sundowndev/PhoneInfoga#dealing-with-google-captcha')
             token = input('\nGOOGLE_ABUSE_EXEMPTION=')
             googleAbuseToken = '&google_abuse=' + token
             r = s.get(URL + googleAbuseToken, headers=headers)
@@ -208,10 +172,13 @@ def search(req, stop):
 
         return links
     except:
-        print(code_error + 'Request failed. Please retry or open an issue on GitHub.')
+        print(code_error + 'Request failed.')
 
 def formatNumber(InputNumber):
     return re.sub("(?:\+)?(?:[^[0-9]*)", "", InputNumber)
+
+
+# local scan defined to find validity & country code
 
 def localScan(InputNumber):
     global number
@@ -297,7 +264,7 @@ def numverifyScan():
     data = json.loads(response.content)
 
     if data["valid"] == False:
-        print((code_error + "Error: Please specify a valid phone number. Example: +6464806649"))
+        print((code_error + "Error: Please specify a valid phone number. Example: +91736363737"))
         sys.exit()
 
     InternationalNumber = '({}){}'.format(data["country_prefix"], data["local_format"])
@@ -309,9 +276,9 @@ def numverifyScan():
     print((code_result + "Line type: {}").format(data["line_type"]))
 
     if data["line_type"] == 'landline':
-        print((code_warning + "This is most likely a landline, but it can still be a fixed VoIP number."))
+        print((code_warning + "This is most likely a landline, but it can still be a fixed VoIP number. VOICE OVER INTERNET"))
     elif data["line_type"] == 'mobile':
-        print((code_warning + "This is most likely a mobile number, but it can still be a VoIP number."))
+        print((code_warning + "This is most likely a mobile number, but it can still be a VoIP number.VOICE OVER INTERNET"))
 
 def ovhScan():
     global localNumber
@@ -400,6 +367,8 @@ def osintSocialMediaScan():
     global internationalNumber
     global customFormatting
 
+
+    #configration files in the json files
     dorks = json.load(open('osint/social_medias.json'))
 
     for dork in dorks:
@@ -439,7 +408,7 @@ def osintScan():
     if not args.osint:
         return -1
 
-    print(code_info + 'Running OSINT footprint reconnaissance...')
+    print(code_info + 'Running OSINT footprint reconnaissance(411 website)...')
 
     # Whitepages
     print((code_info + "Generating scan URL on 411.com..."))
@@ -461,7 +430,7 @@ def osintScan():
         if result:
             print((code_result + "Result found: " + result))
 
-    # Documents
+    # Documents search for the number
     print((code_info + "Searching for documents... (limit=10)"))
     if customFormatting:
         req = 'intext:"{}" | intext:"{}" | intext:"{}" ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv | ext:txt'.format(number,internationalNumber,customFormatting)
@@ -470,6 +439,8 @@ def osintScan():
     for result in search('intext:"{}" | intext:"{}" ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv | ext:txt'.format(number,internationalNumber), stop=10):
         if result:
             print((code_result + "Result found: " + result))
+
+    #reputation scan for the number
 
     print((code_info + '---- Reputation footprints ----'))
 
