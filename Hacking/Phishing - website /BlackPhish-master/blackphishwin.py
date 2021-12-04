@@ -1,9 +1,3 @@
-####################################################
-#       Version supporting windows systems         #
-#                   V1.0-                          #
-#              Commit by Nano                      #
-####################################################
-
 
 # Libraries #
 import os, glob, ctypes
@@ -59,31 +53,7 @@ if version_info < (3,0,0):
 # Why are we not using the colors we just defined? LOL
 
 def warning():  # Banner #
-    print('''
-\033[94;1m
-                https://github.com/iinc0gnit0/BlackPhish\033[0m\033[91m
-
-
-        ▀█████████▄                      ▀████████▄
-          ███    ███                       ███    ███  
-          ███    ███                       ███    ███ 
-          ███▄▄▄██▀                        ███    ███ 
-          ███▀▀▀██▄                        ████████▀ 
-          ███    ██▄\033[31m  ┬  ┌─┐┌─┐┬┌─ \033[91m        ███ \033[31m ┬ ┬┬┌─┐┬ ┬ \033[91m
-          ███    ███\033[31m  │  ├─┤│  ├┴┐ \033[91m        ███\033[31m  ├─┤│└─┐├─┤\033[91m
-        ▄█████████▀ \033[31m  ┴─┘┴ ┴└─┘┴ ┴ \033[91m        ███\033[31m  ┴ ┴┴└─┘┴ ┴\033[94;1m         v3.4
-
-
-                    Banner made by: \033[91;1m[ tuf_unkn0wn ]\033[94;1m
-
-                    Script created by: \033[91;1m[ inc0gnit0 ] [ retro0001 ]\033[94;1m
-
-	            Revisions made by: \033[91;1m[ jackoftimeandreality ]\033[94;1m
-
-                    Websites created by: \033[91;1m[ TableFlipGod ]\033[94;1m 
-
-                    Big Thanks to: \033[91;1m [ DarkSecDevelopers ]\033[93;1m ''')
-    print('\n')
+    
     warningchoice = input(
         "                    Will you use this responsibly (\033[94;1my\033[93;1m/\033[91mn\033[93;1m): ")  # Agreement Message #
 
