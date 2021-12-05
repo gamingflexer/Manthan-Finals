@@ -1,7 +1,6 @@
 #! /usr/bin/env python3
 
 """
-Sherlock: Find Usernames Across Social Networks Module
 
 This module contains the main logic to search for usernames at social
 networks.
@@ -24,7 +23,7 @@ from result import QueryResult
 from notify import QueryNotifyPrint
 from sites  import SitesInformation
 
-module_name = "Sherlock: Find Usernames Across Social Networks"
+module_name = "Find Usernames Across Social Networks"
 __version__ = "0.14.0"
 
 

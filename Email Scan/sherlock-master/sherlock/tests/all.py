@@ -1,7 +1,4 @@
-"""Sherlock Tests
 
-This module contains various tests.
-"""
 from tests.base import SherlockBaseTest
 import unittest
 

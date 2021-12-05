@@ -1,7 +1,4 @@
-"""Sherlock Base Tests
 
-This module contains various utilities for running tests.
-"""
 import os
 import os.path
 import unittest
@@ -15,7 +12,7 @@ import warnings
 
 class SherlockBaseTest(unittest.TestCase):
     def setUp(self):
-        """Sherlock Base Test Setup.
+        """
 
         Does common setup tasks for base Sherlock tests.
 

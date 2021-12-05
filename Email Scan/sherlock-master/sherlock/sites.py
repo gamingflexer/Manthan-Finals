@@ -1,4 +1,4 @@
-"""Sherlock Sites Information Module
+"""
 
 This module supports storing information about web sites.
 This is the raw data that will be used to search for usernames.
