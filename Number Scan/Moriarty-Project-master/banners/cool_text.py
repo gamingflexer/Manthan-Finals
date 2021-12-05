@@ -1,7 +1,7 @@
 import os
 import random
 import time
-colors = {'HEADER' : "\033[95m",
+"""colors = {'HEADER' : "\033[95m",
     'OKBLUE' : "\033[94m",
     'RED' : "\033[91m",
     'YELLOW' : "\033[93m",
@@ -10,7 +10,7 @@ colors = {'HEADER' : "\033[95m",
     'FAIL' : "\033[91m",
     'END' : "\033[0m",
     'BOLD' : "\033[1m",
-    'UNDERLINE' : "\033[4m" }
+    'UNDERLINE' : "\033[4m" }"""
 liste=[
 "figlet -c Moriarty -f banners/sblood.flf  ","figlet -c Moriarty -f banners/3-d.flf  ","figlet -c Moriarty -f banners/avatar.flf  ","figlet -c Moriarty -f banners/bell.flf  ","figlet -c Moriarty -f banners/big.flf  ","figlet -c Moriarty -f banners/bigchief.flf  ","figlet -c Moriarty -f banners/kban.flf  "
 ]
@@ -26,7 +26,7 @@ colors_list=[
 
 
 def cool_t():
-    random_color=colors[random.choice(colors_list)]
+    """random_color=colors[random.choice(colors_list)]
 
 
     print(random_color+"""                   ███████                           ╙███████""")
@@ -75,7 +75,7 @@ def cool_t():
     print(random_color+"""                   ███████▌  .      ,████┐       ^  █████████""")
     print(random_color+"                                  Moriarty  v2.7")
     print(random_color)
-    os.system(random.choice(liste))
+    os.system(random.choice(liste))"""
     
 
 
