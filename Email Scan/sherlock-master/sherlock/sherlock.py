@@ -24,13 +24,13 @@ from result import QueryResult
 from notify import QueryNotifyPrint
 from sites  import SitesInformation
 
-module_name = "Sherlock: Find Usernames Across Social Networks"
+"""module_name = "Sherlock: Find Usernames Across Social Networks" """
 __version__ = "0.14.0"
 
 
 
 
-class SherlockFuturesSession(FuturesSession):
+class LostmindsFuturesSession(FuturesSession):
     def request(self, method, url, hooks={}, *args, **kwargs):
         """Request URL.
 
@@ -88,7 +88,7 @@ class SherlockFuturesSession(FuturesSession):
             # No response hook was already defined, so install it ourselves.
             hooks['response'] = [response_time]
 
-        return super(SherlockFuturesSession, self).request(method,
+        return super(LostmindsFuturesSession, self).request(method,
                                                            url,
                                                            hooks=hooks,
                                                            *args, **kwargs)
@@ -125,7 +125,7 @@ def get_response(request_future, error_type, social_network):
     return response, error_context, expection_text
 
 
-def sherlock(username, site_data, query_notify,
+def lostminds(username, site_data, query_notify,
              tor=False, unique_tor=False,
              proxy=None, timeout=None):
     """Run Sherlock Analysis.
@@ -180,7 +180,7 @@ def sherlock(username, site_data, query_notify,
         max_workers=len(site_data)
 
     # Create multi-threaded session for all requests.
-    session = SherlockFuturesSession(max_workers=max_workers,
+    session = LostmindsFuturesSession(max_workers=max_workers,
                                      session=underlying_session)
 
 
@@ -522,14 +522,14 @@ def main():
 
     # Check for newer version of Sherlock. If it exists, let the user know about it
     try:
-        r = requests.get("https://raw.githubusercontent.com/sherlock-project/sherlock/master/sherlock/sherlock.py")
+        """r = requests.get("https://raw.githubusercontent.com/sherlock-project/sherlock/master/sherlock/sherlock.py")"""
 
         remote_version = str(re.findall('__version__ = "(.*)"', r.text)[0])
         local_version = __version__
 
         if remote_version != local_version:
             print("Update Available!\n" +
-                  f"You are running version {local_version}. Version {remote_version} is available at https://git.io/sherlock")
+                  f"You are running version {local_version}. Version {remote_version} is available at https://git.io/")
 
     except Exception as error:
         print(f"A problem occured while checking for an update: {error}")
@@ -609,7 +609,7 @@ def main():
 
     # Run report on all specified users.
     for username in args.username:
-        results = sherlock(username,
+        results = lostminds(username,
                            site_data,
                            query_notify,
                            tor=args.tor,
