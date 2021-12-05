@@ -1,4 +1,3 @@
-"""Configuration options for Photon."""
 
 VERBOSE = False
 

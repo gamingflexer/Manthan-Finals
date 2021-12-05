@@ -1,4 +1,3 @@
-"""Support for dnsdumpster.com."""
 import re
 
 import requests

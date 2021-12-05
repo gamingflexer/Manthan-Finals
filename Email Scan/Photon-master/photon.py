@@ -23,7 +23,6 @@ from core.flash import flash
 from core.mirror import mirror
 from core.prompt import prompt
 from core.requester import requester
-from core.updater import updater
 from core.utils import (luhn,
                         proxy_type,
                         is_good_proxy,
@@ -87,10 +86,6 @@ parser.add_argument('--wayback', help='fetch URLs from archive.org as seeds',
 args = parser.parse_args()
 
 
-# If the user has supplied --update argument
-if args.update:
-    updater()
-    quit()
 
 # If the user has supplied a URL
 if args.root:
@@ -401,10 +396,6 @@ if args.dns:
     print('%s Generating DNS map' % run)
     dnsdumpster(domain, output_dir)
 
-if args.export:
-    from plugins.exporter import exporter
-    # exporter(directory, format, datasets)
-    exporter(output_dir, args.export, datasets)
 
 print('%s Results saved in %s%s%s directory' % (good, green, output_dir, end))
 

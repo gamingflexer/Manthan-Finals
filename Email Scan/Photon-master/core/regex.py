@@ -1,6 +1,5 @@
 import re
 
-# regex taken from https://github.com/InQuest/python-iocextract
 # Reusable end punctuation regex.
 END_PUNCTUATION = r"[\.\?>\"'\)!,}:;\u201d\u2019\uff1e\uff1c\]]*"
 
