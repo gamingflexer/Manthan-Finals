@@ -1,8 +1,4 @@
-"""Sherlock: Supported Site Listing
-This module generates the listing of supported sites
-which can be found in sites.md
-It also organizes all the sites in alphanumeric order
-"""
+
 import json
 
 pool = list()
