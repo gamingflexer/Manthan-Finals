@@ -1,6 +1,10 @@
 <html>
 <head>
 <style>
+body{
+  background-image: url(1.png);
+  background-size: cover;
+}
 .header img 
 {
   float: left;
@@ -10,7 +14,7 @@
 }
 .header h1 
 {
-  text-align: center;
+  text-align: left;
   position: relative;
   top: 18px;
   left: 10px;
@@ -18,7 +22,9 @@
 }
 .vertical 
 {
-            border-left: 1px solid black;
+            border-left: 1px;
+            border-bottom-color: snow;
+            border-color: snow;
             height:600px;
             position:absolute;
             left: 50%;
@@ -27,30 +33,49 @@
 .head h3
 {
   text-align: right;
+  color: greenyellow;
   position: relative;
   top: 18px;
   right: 300px;
   font-family: Arial, sans-serif;
 }
+.button{
+  background-color: black;
+  color: white;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  margin: 4px 2px;
+
+}
 </style>
+<body>
 
 <div class="header">
-  <img src="D:\College\SEM_III\Manthan Hackathon\FRONTEND\assets\Untitled (Logo).png" alt="logo" />
+  <img src="Untitled (Logo).png" alt="logo" />
   <h1>LOST MINDS</h1><br><br><br>
 </div>
-<form action="/action_page.php">
+<form>
   <label for="fname">Enter your Number:</label>
-  <input type="text" id="fname" name="fname">
-  <input type="submit" value="Enter"><br><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  <!--<input type="submit" value="Enter"><br><br>-->
   <label for="lname">Enter your Email Id:</label>
-  <input type="text" id="lname" name="lname">
-  <input type="submit" value="Enter"><br><br>
-  <button style="width:150px; height:40px; border: 1px solid #888;"><a href="D:\College\SEM_III\Manthan Hackathon\FRONTEND\pg2.html" style="text-decoration: none;">Go to Profile</a></button>
+  <input type="text" id="lname" name="lname"><br><br>
+  <button class ="button" type="submit"  value="Submit">Submit</button>
+  <!--<input type="submit" value="Enter"><br><br>-->
+
+  <h2>Go to saved profiles</h2>
+  <button class="button2" style="width:150px; height:40px; border: 1px solid #888; font-weight: bolder;border-radius: 12px;"><a href="profile.html" style="text-decoration-color: none";>-></a></button>
 </form>
 <div class="head">
 <h3>OUTPUT</h3>
 </div>
 <hr style="width:50%;text-align:right;margin-right:0">
 <div class="vertical"></div>
+</body>
 </head>
 </html>
