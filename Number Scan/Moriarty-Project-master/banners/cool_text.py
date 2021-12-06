@@ -1,3 +1,4 @@
+
 import os
 import random
 import time
@@ -75,10 +76,5 @@ def cool_t():
     print(random_color+"""                   ███████▌  .      ,████┐       ^  █████████""")
     print(random_color+"                                  Moriarty  v2.7")
     print(random_color)
-    os.system(random.choice(liste))"""
-    
-
-
-
-    time.sleep(3)
+    os.system(random.choice(liste))"""time.sleep(3)
 
