@@ -1,3 +1,9 @@
+"""
+python email2phonenumber.py scrape -e target@email.com
+
+python email2phonenumber.py bruteforce -m 555XXX1234 -e target@email.com -p /tmp/proxies.txt -q
+"""
+
 #!/usr/bin/env python
 import argparse
 import requests
