@@ -26,7 +26,6 @@ setup(
     ],
     description='Buster is an OSINT tool used to generate and verify emails and return information associated with them',
     install_requires=requirements,
-    license="GNU GPLv3 ",
     long_description_content_type='text/markdown',
     long_description=readme + "\n\n",
     include_package_data=True,
