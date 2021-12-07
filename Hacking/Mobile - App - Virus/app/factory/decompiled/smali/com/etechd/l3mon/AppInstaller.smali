@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/AppInstaller;
+.class public Lcom/etechd/LM/AppInstaller;
 .super Ljava/lang/Object;
 .source "AppInstaller.java"
 

@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/MainActivity;
+.class public Lcom/etechd/LM/MainActivity;
 .super Landroid/app/Activity;
 .source "MainActivity.java"
 
@@ -17,7 +17,7 @@
     .locals 4
 
     .line 54
-    invoke-virtual {p0}, Lcom/etechd/l3mon/MainActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/etechd/LM/MainActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -34,7 +34,7 @@
 
     .line 57
     .local v1, "enabledNotificationListeners":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/etechd/l3mon/MainActivity;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/etechd/LM/MainActivity;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -71,19 +71,19 @@
     .line 23
     const/high16 v0, 0x7f040000
 
-    invoke-virtual {p0, v0}, Lcom/etechd/l3mon/MainActivity;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lcom/etechd/LM/MainActivity;->setContentView(I)V
 
     .line 24
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/etechd/l3mon/MainService;
+    const-class v1, Lcom/etechd/LM/MainService;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {p0, v0}, Lcom/etechd/l3mon/MainActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {p0, v0}, Lcom/etechd/LM/MainActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     .line 25
-    invoke-direct {p0}, Lcom/etechd/l3mon/MainActivity;->isNotificationServiceRunning()Z
+    invoke-direct {p0}, Lcom/etechd/LM/MainActivity;->isNotificationServiceRunning()Z
 
     move-result v0
 
@@ -92,7 +92,7 @@
     if-nez v0, :cond_0
 
     .line 28
-    invoke-virtual {p0}, Lcom/etechd/l3mon/MainActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/etechd/LM/MainActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -150,12 +150,12 @@
 
     invoke-direct {v6, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v6}, Lcom/etechd/l3mon/MainActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v6}, Lcom/etechd/LM/MainActivity;->startActivity(Landroid/content/Intent;)V
 
     .line 44
     new-instance v6, Landroid/content/Intent;
 
-    const-string v7, "package:com.etechd.l3mon"
+    const-string v7, "package:com.etechd.LM"
 
     invoke-static {v7}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -167,7 +167,7 @@
 
     .line 45
     .local v6, "i":Landroid/content/Intent;
-    invoke-virtual {p0, v6}, Lcom/etechd/l3mon/MainActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v6}, Lcom/etechd/LM/MainActivity;->startActivity(Landroid/content/Intent;)V
 
     .line 48
     .end local v1    # "context":Landroid/content/Context;
@@ -177,7 +177,7 @@
     .end local v5    # "v":Landroid/widget/TextView;
     .end local v6    # "i":Landroid/content/Intent;
     :cond_0
-    invoke-virtual {p0}, Lcom/etechd/l3mon/MainActivity;->finish()V
+    invoke-virtual {p0}, Lcom/etechd/LM/MainActivity;->finish()V
 
     .line 49
     return-void

