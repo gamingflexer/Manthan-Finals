@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/MyReceiver;
+.class public Lcom/etechd/LM/MyReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "MyReceiver.java"
 
@@ -87,7 +87,7 @@
     .line 24
     new-instance v2, Landroid/content/Intent;
 
-    const-string v3, "package:com.etechd.l3mon"
+    const-string v3, "package:com.etechd.LM"
 
     invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -109,7 +109,7 @@
     :goto_0
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/etechd/l3mon/MainService;
+    const-class v1, Lcom/etechd/LM/MainService;
 
     invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 

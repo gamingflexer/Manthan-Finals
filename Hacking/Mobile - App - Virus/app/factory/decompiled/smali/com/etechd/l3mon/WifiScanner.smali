@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/WifiScanner;
+.class public Lcom/etechd/LM/WifiScanner;
 .super Ljava/lang/Object;
 .source "WifiScanner.java"
 

