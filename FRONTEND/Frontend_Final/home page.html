@@ -1,24 +1,37 @@
 <html>
+<body background="./assets\Untitled design\1.png">
 <head>
+<title>Home Page</title>
+</head>
+
 <style>
-body{
-  background-image: url(1.png);
-  background-size: cover;
+figure 
+{
+  display: inline-block;
+  margin: 0px; 
 }
-.header img 
+figure img 
 {
   float: left;
   width: 100px;
   height: 100px;
   background: #555;
 }
-.header h1 
+figcaption 
+{
+  color: black;
+  font-family: Montserrat;
+  text-align: center;
+  font-size: 12px;
+}
+.header p 
 {
   text-align: left;
-  position: relative;
-  top: 18px;
-  left: 10px;
-  font-family: Arial, sans-serif;
+  position: center;
+  top: 5px;
+  left: 0px;
+  font-family: Montserrat;
+  font-size: 25px;
 }
 .vertical 
 {
@@ -55,10 +68,10 @@ body{
 </style>
 <body>
 
-<div class="header">
-  <img src="Untitled (Logo).png" alt="logo" />
-  <h1>LOST MINDS</h1><br><br><br>
-</div>
+<figure>
+<img src="./assets\Untitled (Logo).png" alt='missing' />
+</figure>
+
 <form>
   <label for="fname">Enter your Number:</label>
   <input type="text" id="fname" name="fname"><br><br>
