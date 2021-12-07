@@ -1,11 +1,11 @@
-.class public final Lcom/etechd/l3mon/R$mipmap;
+.class public final Lcom/etechd/LM/R$mipmap;
 .super Ljava/lang/Object;
 .source "R.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/etechd/l3mon/R;
+    value = Lcom/etechd/LM/R;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

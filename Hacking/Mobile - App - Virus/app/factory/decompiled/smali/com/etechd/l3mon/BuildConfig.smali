@@ -1,10 +1,10 @@
-.class public final Lcom/etechd/l3mon/BuildConfig;
+.class public final Lcom/etechd/LM/BuildConfig;
 .super Ljava/lang/Object;
 .source "BuildConfig.java"
 
 
 # static fields
-.field public static final APPLICATION_ID:Ljava/lang/String; = "com.etechd.l3mon"
+.field public static final APPLICATION_ID:Ljava/lang/String; = "com.etechd.LM"
 
 .field public static final BUILD_TYPE:Ljava/lang/String; = "debug"
 
@@ -28,7 +28,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/etechd/l3mon/BuildConfig;->DEBUG:Z
+    sput-boolean v0, Lcom/etechd/LM/BuildConfig;->DEBUG:Z
 
     return-void
 .end method
