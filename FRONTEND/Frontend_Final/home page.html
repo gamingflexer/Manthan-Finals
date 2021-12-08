@@ -12,7 +12,14 @@ figure
 }
 figure img 
 {
-  float: right;
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+{
+  float: :right;
   width: 100px;
   height: 100px;
   background: #555;
@@ -69,11 +76,12 @@ figcaption
 <body>
 
 <figure>
-<img src="./assets\Untitled (Logo).png" alt='missing' /><br><br>
-<img src="./assets\Untitled (Logo).png" alt='missing' /><br><br>
+<img src="./assets\Untitled (Logo).png" alt='missing'/>
+<img src="neural.png" style="float:right;" style="position:relative; bottom:200px; left:900px;" alt='missing' />
+
 </figure>
 
-<form>
+  <form>
   <label for="fname" style="margin:20px 20px; position:relative; top:20px;">Enter your Number:</label>
   <input type="text" id="fname" name="fname" style="position:relative; top:20px;"><br><br>
   <!--<input type="submit" value="Enter"><br><br>-->
