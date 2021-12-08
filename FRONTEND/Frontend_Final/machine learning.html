@@ -7,12 +7,13 @@
 <style>
 figure 
 {
-    display: inline-block;
-    margin: 0px; 
+  margin: 0px; 
 }
 figure img 
 {
-  float: left;
+  position: absolute; 
+  top: 0px;
+  left: 0px;
   width: 100px;
   height: 100px;
   background: #555;
@@ -27,9 +28,10 @@ figcaption
 .header p 
 {
   text-align: left;
+  margin: 20px 20px;
   position: center;
-  top: 5px;
-  left: 0px;
+  top: 60px;
+  left: 100px;
   font-family: Montserrat;
   font-size: 25px;
 }
@@ -38,7 +40,7 @@ figcaption
   text-align: left;
   position: center;
   margin: 20px 20px;
-  top: 5px;
+  top: 50px;
   left: 0px;
   font-family: Montserrat;
   font-size: 15px;
@@ -46,17 +48,17 @@ figcaption
 </style>
 
 <figure>
-<img src="./assets\Untitled (Logo).png" alt='missing' />
+<img src="./assets\Untitled (Logo).png"  alt='LOGO' />
 </figure>
 
 <div class="header">
-<p>Dashboard</p>
+<p>ML Dashboard</p>
 </div>
 
 <form>
-  <label for="fname" style="margin:20px 20px; position:relative; top:20px;">Web Scraping</label><br>
-  <label for="lname" style="margin:20px 20px; position:relative; top:20px;">Clustering</label>
-  <button class ="button" style="position:relative; top:20px; margin:20px 20px; width:40px; height:40px; border: 1px solid #888; font-weight: bolder;border-radius: 12px;" type="submit"  value="Submit" style="position:relative; top:20px; margin:20px 20px;">GO</button>
+  <label for="fname" style="margin:20px 20px; position:relative; top:50px;">Web Scraping</label><br>
+  <label for="lname" style="margin:20px 20px; position:relative; top:50px;">Clustering</label>
+  <button class ="button" style="position:relative; top:50px; margin:20px 20px; width:40px; height:40px; border: 1px solid #888; font-weight: bolder;border-radius: 12px;" type="submit"  value="Submit" style="position:relative; top:20px; margin:20px 20px;">GO</button>
 </form>
 
 <div class="head">
