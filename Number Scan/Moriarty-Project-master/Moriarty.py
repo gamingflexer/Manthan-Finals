@@ -24,7 +24,6 @@ from social_media import microsoft
 from social_media import viber
 from social_media import yandex
 from location import location_risk
-from banners import cool_text
 from risks_and_deep_search import risks
 from risks_and_deep_search import deep_info1
 from risks_and_deep_search import deep_info2
@@ -44,8 +43,7 @@ def get_arguments():
         parser.error("Please Use '-h' Parameter To Get Help!")
     else:
         return options
-def c_text():
-    cool_text.cool_t()
+
 def microsoft_mail(phone_number,username,password):
 	global load_balancer
 	global owner_of_number

@@ -26,7 +26,3 @@ colors_list=[
 
 
 
-def cool_t():
-    """random_color=colors[random.choice(colors_list)]
-    os.system(random.choice(liste))"""time.sleep(3)
-
