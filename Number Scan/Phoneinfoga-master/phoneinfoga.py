@@ -487,7 +487,7 @@ def askForExit():
             sys.exit()
 
 def scanNumber(InputNumber):
-    print(code_title + "[!] ---- Fetching informations for {} ---- [!]".format(formatNumber(InputNumber)))
+ 
 
     localScan(InputNumber)
 
@@ -544,5 +544,5 @@ try:
     if args.output:
         args.output.close()
 except KeyboardInterrupt:
-    print(("\n" + code_error + "Scan interrupted. Good bye!"))
+    print(("\n" + code_error + "Scan interrupted. "))
     sys.exit()

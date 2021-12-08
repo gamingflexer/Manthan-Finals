@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-image: url(
+            "Background.png");
+            min-height: 380px;
+            background-size: cover;
+        }
+            height: 100%;
+            font-family: Montserrat, sans-serif;
+        }
+         
+        * {
+            box-sizing: border-box;
+        }
+         
+        h1 {
+            text-align:left;
+            color:rgb(9, 93, 250);
+            -webkit-text-stroke: 1px black;
+            
+}
+        }
+         
+        /* styling background image */
+     
+        /* Styling the form container */
+        .container {
+            position: absolute;
+            left: 28px;
+            top: 50px;
+            margin: 20px;
+            max-width: 300px;
+            padding: 16px;
+        }
+ 
+        b {
+            color: rgb(11, 12, 12);
+            font-size:20px;
+            -webkit-text-stroke: 1px black;
+        }
+     
+        /* Full-width input */
+        input[type=text],
+        input[type=password] {
+            width: 20%;
+            padding: 15px;
+            margin: 15px 0px;
+            border: 2px solid rgb(252, 36, 187);
+        }
+         
+ 
+     
+        /* Styling the submit button */
+        .button {
+            background-color: rgb(12, 129, 247);
+            color: white;
+            padding: 16px 16px;
+            border: none;
+            cursor: pointer;
+            width: 20%;
+        }
+         
+        .button:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="bg-img">
+        <h1>Sign Up</h1>
+         
+        <form class="container">
+            <b>Create an account</b><br><br>
+
+            <b>Email</b>
+            <input type="text" placeholder="Email"
+                    name="Email" required><br><br>
+ 
+            <b>Password</b>
+            <input type="Password" placeholder="Password"
+                    name="Password" required><br><br>
+ 
+            <button type="submit" class="button">SIGN UP</button>
+        </form>
+    </div>
+</body>
+ 
+</html>
