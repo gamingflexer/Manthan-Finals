@@ -152,7 +152,6 @@ def sync(phone_number):
     owner_sync.sync(phone_number)
 options=get_arguments()
 
-c_text()
 ignore_logs()
 os.system("clear")
 
