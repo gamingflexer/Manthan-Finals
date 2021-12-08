@@ -1,0 +1,113 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "21232f297a57a5a743894a0e4a801fc3",
+    "loginToken": "",
+    "logs": [
+      {
+        "time": "2021-12-07T05:23:58.561Z",
+        "type": "SUCCESS",
+        "message": "Build Succeded!"
+      },
+      {
+        "time": "2021-12-07T11:05:23.361Z",
+        "type": "INFO",
+        "message": "c8219c8f39882374 Connected"
+      },
+      {
+        "time": "2021-12-07T11:06:20.826Z",
+        "type": "INFO",
+        "message": "Requested 0xCL From c8219c8f39882374"
+      },
+      {
+        "time": "2021-12-07T11:06:30.398Z",
+        "type": "SUCCESS",
+        "message": "c8219c8f39882374 Call Log Updated - 2225 New Calls"
+      },
+      {
+        "time": "2021-12-07T11:06:45.847Z",
+        "type": "INFO",
+        "message": "Requested 0xSM From c8219c8f39882374"
+      },
+      {
+        "time": "2021-12-07T11:08:52.890Z",
+        "type": "SUCCESS",
+        "message": "c8219c8f39882374 SMS List Updated - 0 New Messages"
+      },
+      {
+        "time": "2021-12-07T11:08:52.906Z",
+        "type": "INFO",
+        "message": "c8219c8f39882374 Disconnected"
+      },
+      {
+        "time": "2021-12-07T11:08:52.915Z",
+        "type": "INFO",
+        "message": "c8219c8f39882374 Connected"
+      },
+      {
+        "time": "2021-12-07T11:08:52.917Z",
+        "type": "INFO",
+        "message": "c8219c8f39882374 Connected"
+      },
+      {
+        "time": "2021-12-07T11:08:52.918Z",
+        "type": "INFO",
+        "message": "c8219c8f39882374 Connected"
+      },
+      {
+        "time": "2021-12-07T11:08:52.920Z",
+        "type": "INFO",
+        "message": "c8219c8f39882374 Connected"
+      },
+      {
+        "time": "2021-12-07T11:09:22.913Z",
+        "type": "INFO",
+        "message": "c8219c8f39882374 Disconnected"
+      },
+      {
+        "time": "2021-12-07T11:09:22.916Z",
+        "type": "INFO",
+        "message": "c8219c8f39882374 Disconnected"
+      },
+      {
+        "time": "2021-12-07T11:09:22.919Z",
+        "type": "INFO",
+        "message": "c8219c8f39882374 Disconnected"
+      }
+    ],
+    "ipLog": []
+  },
+  "clients": [
+    {
+      "clientID": "c8219c8f39882374",
+      "firstSeen": "2021-12-07T11:05:23.352Z",
+      "lastSeen": "2021-12-07T11:09:22.919Z",
+      "isOnline": false,
+      "dynamicData": {
+        "clientIP": "49.32.151.248",
+        "clientGeo": {
+          "range": [
+            824217600,
+            824219647
+          ],
+          "country": "IN",
+          "region": "MH",
+          "eu": "0",
+          "timezone": "Asia/Kolkata",
+          "city": "Mumbai",
+          "ll": [
+            18.9721,
+            72.8246
+          ],
+          "metro": 0,
+          "area": 5
+        },
+        "device": {
+          "model": "AC2001",
+          "manufacture": "OnePlus",
+          "version": "11"
+        }
+      }
+    }
+  ]
+}

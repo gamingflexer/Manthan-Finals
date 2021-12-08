@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -60,8 +61,6 @@ def microsoft_mail(phone_number,username,password):
 	WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/main/div/a[2]"))).click()
 	WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "loginfmt"))).send_keys(username)
 	WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/form[1]/div/div/div/div[2]/div/div/div[1]/div[3]/div/div/div/div[4]/div/div/div/div[2]/input"))).click()
-	
-    
 
 	try:
 		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "passwd"))).send_keys(password)
@@ -71,7 +70,6 @@ def microsoft_mail(phone_number,username,password):
 		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/nav/div/form/input"))).send_keys(phone_number)
 		time.sleep(1)
 		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/nav/div/form/button"))).click()
-		
 
 		try:
 			name=WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/main/div/div[1]/div[1]/header/div[2]/h1/span"))).text
@@ -126,7 +124,6 @@ def microsoft_mail(phone_number,username,password):
 				owner_of_number="Invaild Microsoft Account And Password!"
 				print(colored.red("[-]Owner Of The Number:")+colored.red(owner_of_number))
 				driver.quit()
-		
 def facebook_phone(phone_number):
     facebook.fb(phone_number)
 def instagram_phone(phone_number):

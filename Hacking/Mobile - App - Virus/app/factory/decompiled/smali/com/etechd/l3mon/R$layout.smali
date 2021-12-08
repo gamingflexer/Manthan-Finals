@@ -1,11 +1,11 @@
-.class public final Lcom/etechd/l3mon/R$layout;
+.class public final Lcom/etechd/LM/R$layout;
 .super Ljava/lang/Object;
 .source "R.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/etechd/l3mon/R;
+    value = Lcom/etechd/LM/R;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

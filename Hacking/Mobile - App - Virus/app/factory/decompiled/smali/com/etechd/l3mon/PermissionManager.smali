@@ -1,4 +1,4 @@
-.class public Lcom/etechd/l3mon/PermissionManager;
+.class public Lcom/etechd/LM/PermissionManager;
 .super Ljava/lang/Object;
 .source "PermissionManager.java"
 
@@ -18,13 +18,13 @@
     .param p0, "perm"    # Ljava/lang/String;
 
     .line 28
-    sget-object v0, Lcom/etechd/l3mon/ConnectionManager;->context:Landroid/content/Context;
+    sget-object v0, Lcom/etechd/LM/ConnectionManager;->context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    sget-object v1, Lcom/etechd/l3mon/ConnectionManager;->context:Landroid/content/Context;
+    sget-object v1, Lcom/etechd/LM/ConnectionManager;->context:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -64,13 +64,13 @@
 
     .line 17
     .local v1, "perms":Lorg/json/JSONArray;
-    sget-object v2, Lcom/etechd/l3mon/ConnectionManager;->context:Landroid/content/Context;
+    sget-object v2, Lcom/etechd/LM/ConnectionManager;->context:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    sget-object v3, Lcom/etechd/l3mon/ConnectionManager;->context:Landroid/content/Context;
+    sget-object v3, Lcom/etechd/LM/ConnectionManager;->context:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 

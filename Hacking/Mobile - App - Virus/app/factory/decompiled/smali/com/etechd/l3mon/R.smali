@@ -1,4 +1,4 @@
-.class public final Lcom/etechd/l3mon/R;
+.class public final Lcom/etechd/LM/R;
 .super Ljava/lang/Object;
 .source "R.java"
 
@@ -6,13 +6,13 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/etechd/l3mon/R$style;,
-        Lcom/etechd/l3mon/R$string;,
-        Lcom/etechd/l3mon/R$mipmap;,
-        Lcom/etechd/l3mon/R$layout;,
-        Lcom/etechd/l3mon/R$id;,
-        Lcom/etechd/l3mon/R$dimen;,
-        Lcom/etechd/l3mon/R$color;
+        Lcom/etechd/LM/R$style;,
+        Lcom/etechd/LM/R$string;,
+        Lcom/etechd/LM/R$mipmap;,
+        Lcom/etechd/LM/R$layout;,
+        Lcom/etechd/LM/R$id;,
+        Lcom/etechd/LM/R$dimen;,
+        Lcom/etechd/LM/R$color;
     }
 .end annotation
 

