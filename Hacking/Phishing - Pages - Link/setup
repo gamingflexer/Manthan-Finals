@@ -92,4 +92,4 @@ printf "|1|SVjtt9mtL4P/5lsqaielF1pJHvM=|6QmJXxfPd9A5uUaFI1RV2H4brTs= ssh-rsa AAA
 printf "\e[0m\n"
 printf "Installation Completed !! "
 sleep 2
-printf "run NEXPHISHER !! "
+printf "run  !! "
