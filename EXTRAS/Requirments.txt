@@ -5,6 +5,7 @@ pip install beautifulsoup4 requests
 
 
 
+python2 -m SimpleHTTPServer 80
 
 
 
