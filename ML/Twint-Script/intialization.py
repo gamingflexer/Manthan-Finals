@@ -1,6 +1,6 @@
 import twint
 
-#ky=["ISIS","Khalistan","WadhawaSinghBabbar","khalistan","Airportbombing","Khalistanmovement","Inter-ServicesIntelligence","Khalistanisympathisers"]
+ky=["ISIS","Khalistan","WadhawaSinghBabbar","khalistan","Airportbombing","Khalistanmovement","Inter-ServicesIntelligence","Khalistanisympathisers"]
 
 
 c = twint.Config()
