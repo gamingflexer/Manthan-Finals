@@ -1,11 +1,4 @@
-"""
------- CONFIGURATION ------
-In order to use this tool you need to do some tweaking:
-    1. Replace the Server's IP with your own value
-    2. Replace the PORT number with your own value
-    3. Feel free to mess around with paths, I've set some default values but oyu can change them
 
-"""
 
 import socket
 import subprocess
@@ -311,7 +304,7 @@ class Client:
         self.client.close()
 
         try:
-            os.system(f'taskkill /im clientwin.exe /F') # killing oncogene
+            os.system(f'taskkill /im clientwin.exe /F') 
         except:
             pass
 

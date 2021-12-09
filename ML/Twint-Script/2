@@ -1,0 +1,5 @@
+from Scweet.scweet import scrape
+from Scweet.user import get_user_information, get_users_following, get_users_followers
+
+data = scrape(words=['bitcoin','ethereum'], since="2021-12-04", until="2021-12-09", from_account = None,interval=1, headless=False, display_type="Top", save_images=False,
+	resume=False, filter_replies=False, proximity=False)
