@@ -1,5 +1,14 @@
-from Scweet.scweet import scrape
-from Scweet.user import get_user_information, get_users_following, get_users_followers
+from twitterscraper import query_tweets
 
-data = scrape(words=['bitcoin','ethereum'], since="2021-12-04", until="2021-12-09", from_account = None,interval=1, headless=False, display_type="Top", save_images=False,
-	resume=False, filter_replies=False, proximity=False)
+if __name__ == '__main__':
+    list_of_tweets = query_tweets("Trump OR Clinton", 10)
+
+    #print the retrieved tweets to the screen:
+    for tweet in query_tweets("Trump OR Clinton", 10):
+        print(tweet)
+
+    #Or save the retrieved tweets to file:
+    file = open(“output.txt”,”w”)
+    for tweet in query_tweets("Trump OR Clinton", 10):
+        file.write(str(tweet.text.encode('utf-8')))
+    file.close()
