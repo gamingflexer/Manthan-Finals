@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-__version__ = 'v1.0.0-rc2'
-
 try:
     import sys
     from colorama import Fore, Style
@@ -15,9 +13,10 @@ except:
     print('[!] Missing requirements. Try running python3 -m pip install -r requirements.txt')
     sys.exit()
 
-if sys.version_info[0] < 3:
-    print("\033[1m\033[93m(!) Please run the tool using Python 3" + Style.RESET_ALL)
-    sys.exit()
+
+
+# ARGUMENTS
+
 
 parser = argparse.ArgumentParser(usage='Script Name  -n <number> [options]')
 
@@ -92,7 +91,6 @@ if args.update:
                 handle.write(chunk)
 
     print('Updating ...')
-    print('Actual version: {}'.format(__version__))
 
 
     osintFiles = ['disposable_num_providers.json', 'individuals.json', 'reputation.json', 'social_medias.json']
@@ -522,7 +520,6 @@ try:
             sys.exit()
 
         sys.stdout = args.output
-        banner()
     else:
         code_info = Fore.RESET + Style.BRIGHT + '[*] '
         code_warning = Fore.YELLOW + Style.BRIGHT + '(!) '

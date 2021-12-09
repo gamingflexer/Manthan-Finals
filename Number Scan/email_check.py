@@ -1,7 +1,7 @@
 """
 python email_check.py scrape -e target@email.com
-
 python email_check.py bruteforce -m 555XXX1234 -e target@email.com -p /tmp/proxies.txt -q
+
 """
 
 #!/usr/bin/env python
