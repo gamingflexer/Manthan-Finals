@@ -406,7 +406,7 @@ def get_masked_email_amazon(phone_numbers, victim_email, verbose):
             exit("Unknown error!")
     if not found_possible_number:
         logger.error(
-            "%sCouldn't find a phone number associated to %s %s", RED, args.email, ENDC)
+            "%sCouldn't find a phone number associated to & Dont worry we are adding new websites soon !! %s %s", RED, args.email, ENDC)
 
 
 def get_masked_email_twitter(phone_numbers, victim_email, verbose):
@@ -527,7 +527,7 @@ def get_masked_email_twitter(phone_numbers, victim_email, verbose):
             continue
     if not found_possible_number:
         logger.error(
-            "%sCouldn't find a phone number associated to %s %s", RED, args.email, ENDC)
+            "%sCouldn't find a phone number associated to & Dont worry we are adding new websites soon !!%s %s", RED, args.email, ENDC)
 
 
 def start_scrapping(email, quiet_mode):
@@ -613,7 +613,7 @@ def scrape_last_pass(email):
                 "%sLastpass reports that the length of the phone number (without country code) is %s digits %s",
                 GREEN, str(len(regex_output.group(2).replace("-", ""))), ENDC)
     else:
-        logger.info("%sLastpass did not report any digits %s", YELLOW, ENDC)
+        logger.info("%sLastpass did not report any digits & Dont worry we are adding new websites soon !!%s", YELLOW, ENDC)
 
 
 def scrape_ebay(email):
