@@ -17,4 +17,4 @@ def mainMenu():
     print("--ccb  Get clipboard content")
     print("--getlogs  Get key logger logs" + '\n')
     print("Exit")
-    print("__________________________")
+    print("__________________________-------------------------------------------")

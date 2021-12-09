@@ -1,20 +1,10 @@
-"""
-------- CONFIGURATION ------
-In order to use this tool you need to do some tweaking:
-    1. The Server's IP gets automatically set by taking the address from /etc/hosts (Linux), check if your LAN address exists in this file. I had to put it manually since there was only localhost.
-    2. Select a PORT number, the default value setted in the client file is 1234
-    3. Play around with the paths, I've set some default values but you can change them
 
-This code was tested and developed on a Linux machine, it may not work on other machines.
-
-"""
 import socket
 import sys
 import os
 import time
 
 from zipfile import ZipFile
-from displayBanner import banner
 from mainMenu import mainMenu
 
 
@@ -605,7 +595,7 @@ def main():
     except FileExistsError:
         pass
 
-    banner()
+    
     time.sleep(1)
 
     HOSTNAME = socket.gethostname()
