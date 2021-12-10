@@ -1,0 +1,115 @@
+<html>
+<body background="1.png"></body>
+<script>  
+function validateform(){  
+ var email=document.myform.email.value;  
+ var num=document.myform.num.value;  
+if (email==null || email==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(num.length==9){  
+  alert("Phone number must be 10 characters long.");  
+  return false;  
+  }
+}  
+</script>   
+<head>
+  <style>
+    figure 
+    {
+      display: inline-block;
+      margin: 0px; 
+    }
+    figure img 
+    {
+      float: left;
+      width: 100px;
+      height: 100px;
+      background: #555;
+    }
+    figcaption 
+    {
+      color: black;
+      font-family: Montserrat;
+      text-align: center;
+      font-size: 12px;
+    }
+    .header p 
+    {
+      text-align: left;
+      position: center;
+      top: 5px;
+      left: 0px;
+      font-family: Montserrat;
+      font-size: 25px;
+    }
+    .vertical 
+    {
+                border-left: 1px;
+                border-bottom-color: snow;
+                border-color: snow;
+                height:600px;
+                position:absolute;
+                left: 50%;
+                top: 300px;
+    }
+    .head h3
+    {
+      text-align: right;
+      color: greenyellow;
+      position: relative;
+      top: 18px;
+      right: 300px;
+      font-family:  Montserrat;
+    }
+    .button
+    {
+      background-color: black;
+      color: white;
+      padding: 10px 28px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 12px;
+      margin: 4px 2px;
+    }
+    #right{
+      float:right;
+    }
+    </style>
+    <body>
+
+      <figure>
+      <img src="Untitled (Logo).png" alt='missing' /><br><br>
+      </figure>
+      <div><img src="user (1).png" class="ribbon" id="right">
+      </img>
+      </div>
+      
+      <form name="myform" method="post" action="insert.php" onsubmit="return validateform()">
+        <label for="email" style="margin:20px 20px; position:relative; top:20px;">Enter your Email Id:</label>
+        <input type="text" id="email" name="email" style="position:relative; top:20px;"><br><br>
+        <label for="num" style="margin:20px 20px; position:relative; top:20px;">Enter your Number:</label>
+        <input type="num" id="num" name="num" style="position:relative; top:20px;"><br><br>
+        <!--<input type="submit" value="Enter"><br><br>-->
+        
+        <button class ="button" type="submit"  value="submit" style="position:relative; top:20px; margin:20px 20px;">Submit</button>
+        <!--<input type="submit" value="Enter"><br><br>-->
+      </form>
+      
+      <button class="button1" style="position:relative; top:20px; margin:20px 20px; width:150px; height:40px; border: 1px solid #888; font-weight: bolder;border-radius: 12px;"><a style="text-decoration:none" href="./profile.html" style="text-decoration-color: none";>Saved Profiles</a></button>
+      <button class="button2" style="position:relative; top:20px; margin:20px 20px; width:150px; height:40px; border: 1px solid #888; font-weight: bolder;border-radius: 12px;"><a style="text-decoration:none" href="./hacking vector.html" style="text-decoration-color: none";>Hacking Vector</a></button>
+      
+      
+
+
+<!--<form name="myform" method="post" action="insert.php" onsubmit="return validateform()" >  
+email: <input type="text" name="email"><br/>  
+Phone number: <input type="num" name="num"><br/>  
+<input type="submit" value="register">-->
+</form>  
+</body>
+</head>
+</html>

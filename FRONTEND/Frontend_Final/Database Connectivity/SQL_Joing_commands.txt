@@ -1,0 +1,1 @@
+SELECT u.id, n.name,u.num,u.email from Users u, username n where u.num=n.num;
