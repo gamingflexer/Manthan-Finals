@@ -1,26 +1,9 @@
-Commands
-
-pip install beautifulsoup4 requests
-
-
-
-
-python2 -m SimpleHTTPServer 80
-
-
+######### Commands ########
 
 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
 
 
-
-
-
-
-
-
-
-
-
+pip install beautifulsoup4 requests
 
 ﻿requests
 bs4
@@ -29,7 +12,6 @@ phonenumbers
 argparse
 urllib3
 colorama
-
 Lxml
 beautifulsoup4==4.8.0
 bs4==0.0.1
@@ -39,13 +21,10 @@ idna==2.8
 requests==2.22.0
 soupsieve==1.9.3
 urllib3==1.26.5
-
 colorama
 requests
 urllib3
-
 Jdk8
-
 requests
 art
 colorama
@@ -73,3 +52,9 @@ requests-toolbelt==0.7.0
 PySocks==1.6.8
 requests==2.20.0
 twint
+
+
+python2 -m SimpleHTTPServer 80
+
+
+
