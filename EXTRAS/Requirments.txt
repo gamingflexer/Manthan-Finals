@@ -1,11 +1,5 @@
-######### Commands ########
-
-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
-
-
-pip install beautifulsoup4 requests
-
-﻿requests
+beautifulsoup4
+requests
 bs4
 html5lib
 phonenumbers
@@ -29,16 +23,9 @@ requests
 art
 colorama
 openpyxl
-
-pip install flake8
-
-
-requests
-requests[socks]
+flake8
 urllib3
 tld
-
-
 certifi>=2019.6.16
 colorama>=0.4.1
 PySocks>=1.7.0
@@ -51,10 +38,7 @@ moviepy==0.2.2.11
 requests-toolbelt==0.7.0
 PySocks==1.6.8
 requests==2.20.0
-twint
-
-
-python2 -m SimpleHTTPServer 80
+SimpleHTTPServer 
 
 
 
