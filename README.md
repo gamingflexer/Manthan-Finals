@@ -1,4 +1,4 @@
-https://lost-minds.netlify.app/ (Prototype)
+https://lost-minds.netlify.app/ (Prototype) ⭐️ Special thanks to https://github.com/vrindarx for helping with prototype 
 
 https://app.diagrams.net/
 
