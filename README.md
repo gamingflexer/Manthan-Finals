@@ -1,4 +1,4 @@
-https://lost-minds.netlify.app/
+https://lost-minds.netlify.app/ (Prototype)
 
 https://app.diagrams.net/
 
@@ -22,4 +22,7 @@ The primary objective of this problem statement is to identify all social media 
 · Use of external third-party services is not recommended.
 
 · Participants are expected to obtain suitable data required to work on this problem statement on their own.
+
+![Screenshot](EXTRAS/domain.png)
+
 
