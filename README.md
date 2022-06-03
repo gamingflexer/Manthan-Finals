@@ -2,6 +2,8 @@ https://lost-minds.netlify.app/ (Prototype) ⭐️ Special thanks to https://git
 
 https://app.diagrams.net/
 
+Youtube Video - https://www.youtube.com/watch?v=-WeHS5Jt82A
+
 # Lost-Minds
 Terrorists often create accounts on various social media platforms for spreading propaganda and hate material. In doing so, they usually use the same phone number or email address. Build a solution that can list out all accounts across various social media platforms which have been created using the specified phone number or email address.
 
